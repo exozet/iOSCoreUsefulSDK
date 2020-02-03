@@ -30,6 +30,7 @@ infix operator ->%
 
 public extension String {
     
+    /// Typealias for the Regular Expression strings.
     typealias RegEx = String
     
     /// Regular Expression string for email validations.

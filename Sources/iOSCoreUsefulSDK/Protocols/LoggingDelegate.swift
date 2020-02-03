@@ -22,7 +22,14 @@
 
 import Foundation
 
+/// Classes that are assigned to listen logs from `LoggingManager` should conform this protocol in order to receive logs.
 public protocol LoggingDelegate: class {
+    /// Received log messages are delivered through this method.
+    /// - Parameters:s
+    ///   - message: Log message string
+    ///   - level: Level of the log
+    ///   - domain: Domain of the log
+    ///   - source: Source (a.k.a file and the function name of the log in default)
     func log(message: String,
              level: LogLevel,
              domain: LogDomain,
