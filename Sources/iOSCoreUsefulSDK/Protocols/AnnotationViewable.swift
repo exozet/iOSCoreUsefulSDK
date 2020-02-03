@@ -20,6 +20,7 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
+#if !os(macOS) && !os(watchOS)
 import MapKit
 import UIKit
 
@@ -36,6 +37,7 @@ public protocol AnnotationViewable: MKAnnotation {
     func viewForAnnotation(for mapView: MKMapView) -> MKAnnotationView
 }
 
+@available(tvOS 11.0, *)
 @available(iOS 11.0, *)
 extension MKClusterAnnotation: AnnotationViewable {
 
@@ -45,3 +47,4 @@ extension MKClusterAnnotation: AnnotationViewable {
 
 }
 
+#endif

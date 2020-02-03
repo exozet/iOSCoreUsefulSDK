@@ -1,3 +1,5 @@
+#if !os(watchOS)
+
 import XCTest
 
 #if !canImport(ObjectiveC)
@@ -6,4 +8,6 @@ public func allTests() -> [XCTestCaseEntry] {
         testCase(iOSCoreUsefulSDKTests.allTests),
     ]
 }
+#endif
+
 #endif

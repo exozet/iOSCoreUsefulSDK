@@ -20,6 +20,7 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
+#if !os(macOS)
 import UIKit
 
 /**
@@ -51,9 +52,11 @@ public extension UIColor {
         }
     }
     
+    #if !os(watchOS)
+    
     /// Label color that is trait aware for iOS 13, otherwise black.
-    public class var styleLabel: UIColor {
-        if #available(iOS 13.0, *) {
+    class var styleLabel: UIColor {
+        if #available(iOS 13.0, *), #available(tvOS 13.0, *) {
             return .label
         } else {
             return .black
@@ -61,8 +64,8 @@ public extension UIColor {
     }
     
     /// Link color that is trait aware for iOS 13, otherwise system blue.
-    public class var styleLink: UIColor {
-        if #available(iOS 13.0, *) {
+    class var styleLink: UIColor {
+        if #available(iOS 13.0, *), #available(tvOS 13.0, *) {
             return .link
         } else {
             return .systemBlue
@@ -70,11 +73,17 @@ public extension UIColor {
     }
     
     /// Background color that is trait aware for iOS 13, otherwise white.
-    public class var styleBackground: UIColor {
-        if #available(iOS 13.0, *) {
+    @available(tvOS, unavailable)
+    class var styleBackground: UIColor {
+        if #available(iOS 13.0, *), #available(tvOS 13.0, *) {
             return .systemBackground
         } else {
             return .white
         }
     }
+    
+    #endif
+    
 }
+
+#endif

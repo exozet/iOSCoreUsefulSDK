@@ -20,6 +20,7 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
+#if !os(macOS) && !os(watchOS)
 import UIKit
 
 public extension UIDevice {
@@ -59,7 +60,7 @@ public extension UIDevice {
     
     /// Returns `true` if device has one of with the notch.
     var hasNotch: Bool {
-        if #available(iOS 11.0, *) {
+        if #available(iOS 11.0, *), #available(tvOS 11.0, *) {
             let bottomInset = UIApplication.shared.keyWindow?.safeAreaInsets.bottom ?? 0
             return bottomInset > 0
         } else {
@@ -102,3 +103,4 @@ public extension UIDevice {
     }
     
 }
+#endif

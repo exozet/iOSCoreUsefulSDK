@@ -1,3 +1,4 @@
+#if !os(watchOS)
 import XCTest
 @testable import iOSCoreUsefulSDK
 
@@ -13,3 +14,5 @@ final class iOSCoreUsefulSDKTests: XCTestCase {
         ("testExample", testExample),
     ]
 }
+
+#endif

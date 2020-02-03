@@ -20,6 +20,7 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
+#if !os(macOS) && !os(watchOS)
 import UIKit
 
 /**
@@ -65,3 +66,5 @@ public extension ViewControllerIdentifiable {
 }
 
 extension UIViewController: ViewControllerIdentifiable { }
+
+#endif

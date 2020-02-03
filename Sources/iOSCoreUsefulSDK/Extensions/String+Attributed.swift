@@ -21,7 +21,9 @@
 // THE SOFTWARE.
 
 import Foundation
+#if !os(macOS)
 import UIKit
+#endif
 
 public extension String {
     
@@ -64,6 +66,7 @@ public extension String {
         return NSMutableAttributedString(string: self, attributes: attributes)
     }
     
+    #if !os(macOS)
     /**
      Returns HTML attributed string with custom attributes.
      - parameter attributes: custom attributes
@@ -118,6 +121,7 @@ public extension String {
         
         return text
     }
+    #endif
     
     /// Converts string to URL by using `stringLiteral` initializer.
     var url: URL { return URL(stringLiteral: self) }

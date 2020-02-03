@@ -20,7 +20,7 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-import UIKit
+#if !os(watchOS)
 import AVKit
 
 public extension CMTime {
@@ -58,3 +58,5 @@ public extension CMTime {
     }
     
 }
+
+#endif

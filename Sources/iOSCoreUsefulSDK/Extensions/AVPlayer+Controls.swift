@@ -20,6 +20,7 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
+#if !os(watchOS)
 import AVKit
 
 public extension AVPlayer {
@@ -29,3 +30,5 @@ public extension AVPlayer {
         return self.rate != 0 && self.error == nil
     }
 }
+
+#endif

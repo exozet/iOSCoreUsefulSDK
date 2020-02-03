@@ -20,6 +20,7 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
+#if !os(macOS)
 import UIKit
 
 public extension CGSize {
@@ -264,3 +265,4 @@ public extension CGPoint {
         lhs = CGPoint(x: lhs.x - CGFloat(rhs), y: lhs.y - CGFloat(rhs))
     }
 }
+#endif

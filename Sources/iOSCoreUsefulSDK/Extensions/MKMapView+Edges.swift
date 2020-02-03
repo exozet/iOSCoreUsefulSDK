@@ -20,6 +20,7 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
+#if !os(watchOS)
 import Foundation
 import MapKit
 
@@ -60,3 +61,5 @@ public extension CLLocationDegrees {
         return self * 111 * 1000
     }
 }
+
+#endif

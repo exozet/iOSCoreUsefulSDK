@@ -20,11 +20,14 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
+#if !os(macOS) && !os(watchOS)
 import UIKit
 
+@available(tvOS, unavailable)
 public extension UIStatusBarStyle {
     
     /// If OS supports Dark Mode, returns `darkContent`, otherwise `default`.
+    @available(tvOS 13.0, *)
     static var dark: UIStatusBarStyle {
         if #available(iOS 13.0, *) {
             return .darkContent
@@ -34,3 +37,5 @@ public extension UIStatusBarStyle {
     }
     
 }
+
+#endif

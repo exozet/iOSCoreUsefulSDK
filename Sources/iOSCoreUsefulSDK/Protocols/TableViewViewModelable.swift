@@ -20,6 +20,7 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
+#if !os(macOS) && !os(watchOS)
 import UIKit
 
 /// Presenter protocol designed as data-sources and delegate for tableviews.
@@ -82,3 +83,5 @@ public extension TableViewViewModelable {
     func canMoveRow(at indexPath: IndexPath, for tableView: UITableView) -> Bool { return false }
     func moveRowAt(from sourceIndex: IndexPath, to destinationIndex: IndexPath, for tableView: UITableView) { }
 }
+
+#endif

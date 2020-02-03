@@ -20,6 +20,7 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
+#if !os(macOS)
 import UIKit
 
 public extension UIFont {
@@ -83,3 +84,4 @@ public extension UIFont {
     }
     
 }
+#endif

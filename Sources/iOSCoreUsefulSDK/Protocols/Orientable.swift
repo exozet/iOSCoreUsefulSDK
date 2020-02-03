@@ -20,6 +20,7 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
+#if !os(macOS) && !os(watchOS)
 import UIKit
 
 /**
@@ -36,3 +37,5 @@ public protocol Portaiteable: UIViewController { }
  View Controllers who conform that protocol, will mark themselves as accepting all screen rotations.
  */
 public protocol AllOrientateable: UIViewController { }
+
+#endif

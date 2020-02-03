@@ -20,6 +20,7 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
+#if !os(macOS) && !os(watchOS)
 import Foundation
 import UIKit
 
@@ -134,3 +135,4 @@ public extension UISegmentedControl {
     }
 }
 
+#endif
