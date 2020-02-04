@@ -49,7 +49,7 @@ public extension CGSize {
         return CGSize(width: lhs.width + rhs, height: lhs.height + rhs)
     }
     
-    /// Adds right handsize to left handsize.
+    /// Adds right handside to left handside.
     ///
     /// How to use:
     /// ````
@@ -61,7 +61,7 @@ public extension CGSize {
         lhs = CGSize(width: lhs.width + rhs.width, height: lhs.height + rhs.height)
     }
     
-    /// Decreases the size with the given right handsize.
+    /// Decreases the size with the given right handside.
     ///
     /// How to use:
     /// ````
@@ -73,7 +73,7 @@ public extension CGSize {
         lhs = CGSize(width: lhs.width - rhs.width, height: lhs.height - rhs.height)
     }
     
-    /// Adds right handsize to left handsize.
+    /// Adds right handside to left handside.
     ///
     /// How to use:
     /// ````
@@ -85,7 +85,7 @@ public extension CGSize {
         lhs += CGSize(width: rhs, height: rhs)
     }
     
-    /// Decreases the size with the given right handsize.
+    /// Decreases the size with the given right handside.
     ///
     /// How to use:
     /// ````
@@ -97,7 +97,7 @@ public extension CGSize {
         lhs -= CGSize(width: rhs, height: rhs)
     }
     
-    /// Adds right handsize to left handsize.
+    /// Adds right handside to left handside.
     ///
     /// How to use:
     /// ````
@@ -109,7 +109,7 @@ public extension CGSize {
         lhs += CGSize(width: rhs, height: rhs)
     }
     
-    /// Decreases the size with the given right handsize.
+    /// Decreases the size with the given right handside.
     ///
     /// How to use:
     /// ````
@@ -121,7 +121,7 @@ public extension CGSize {
         lhs -= CGSize(width: rhs, height: rhs)
     }
     
-    /// Adds right handsize to left handsize.
+    /// Adds right handside to left handside.
     ///
     /// How to use:
     /// ````
@@ -133,7 +133,7 @@ public extension CGSize {
         lhs += CGSize(width: rhs, height: rhs)
     }
     
-    /// Decreases the size with the given right handsize.
+    /// Decreases the size with the given right handside.
     ///
     /// How to use:
     /// ````
@@ -149,12 +149,12 @@ public extension CGSize {
 
 public extension CGPoint {
     
-    /// Increases the X and Y points with the given amount
+    /// Increases the X and Y points with the given amount.
     static func + (lhs: CGPoint, rhs: CGFloat) -> CGPoint {
         return CGPoint(x: lhs.x + rhs, y: lhs.y + rhs)
     }
     
-    /// Reduces the X and Y points with the given amount
+    /// Reduces the X and Y points with the given amount.
     static func - (lhs: CGPoint, rhs: CGFloat) -> CGPoint {
         return CGPoint(x: lhs.x - rhs, y: lhs.y - rhs)
     }
@@ -169,7 +169,7 @@ public extension CGPoint {
         return CGPoint(x: lhs.x - rhs.x, y: lhs.y - rhs.y)
     }
     
-    /// Adds right handsize to left handsize.
+    /// Adds right handside to left handside.
     ///
     /// How to use:
     /// ````
@@ -181,19 +181,19 @@ public extension CGPoint {
         lhs = CGPoint(x: lhs.x + rhs.x, y: lhs.y + rhs.y)
     }
     
-    /// Decreases left handsize with right handsize.
+    /// Decreases left handside with right handside.
     ///
     /// How to use:
     /// ````
     /// var point = CGPoint(x: 5, y: 5)
-    /// point += CGPoint(x: 3, y: 3)
+    /// point -= CGPoint(x: 3, y: 3)
     /// ````
     ///
     static func -= (lhs: inout CGPoint, rhs: CGPoint) {
         lhs = CGPoint(x: lhs.x - rhs.x, y: lhs.y - rhs.y)
     }
     
-    /// Adds right handsize to left handsize.
+    /// Adds right handside to left handside.
     ///
     /// How to use:
     /// ````
@@ -205,7 +205,7 @@ public extension CGPoint {
         lhs = CGPoint(x: lhs.x + rhs, y: lhs.y + rhs)
     }
     
-    /// Decreases left handsize with right handsize.
+    /// Decreases left handside with right handside.
     ///
     /// How to use:
     /// ````
@@ -217,7 +217,7 @@ public extension CGPoint {
         lhs = CGPoint(x: lhs.x - rhs, y: lhs.y - rhs)
     }
     
-    /// Adds right handsize to left handsize.
+    /// Adds right handside to left handside.
     ///
     /// How to use:
     /// ````
@@ -229,7 +229,7 @@ public extension CGPoint {
         lhs = CGPoint(x: lhs.x + CGFloat(rhs), y: lhs.y + CGFloat(rhs))
     }
     
-    /// Decreases left handsize with right handsize.
+    /// Decreases left handside with right handside.
     ///
     /// How to use:
     /// ````
@@ -241,7 +241,7 @@ public extension CGPoint {
         lhs = CGPoint(x: lhs.x - CGFloat(rhs), y: lhs.y - CGFloat(rhs))
     }
     
-    /// Adds right handsize to left handsize.
+    /// Adds right handside to left handside.
     ///
     /// How to use:
     /// ````
@@ -253,7 +253,7 @@ public extension CGPoint {
         lhs = CGPoint(x: lhs.x + CGFloat(rhs), y: lhs.y + CGFloat(rhs))
     }
     
-    /// Decreases left handsize with right handsize.
+    /// Decreases left handside with right handside.
     ///
     /// How to use:
     /// ````
