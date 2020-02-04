@@ -31,6 +31,15 @@ public extension CLLocationCoordinate2D {
     
 }
 
+extension CLLocationCoordinate2D: Equatable {
+    
+    /// Compares two coordinates equality.
+    public static func == (lhs: CLLocationCoordinate2D, rhs: CLLocationCoordinate2D) -> Bool {
+        return lhs.latitude == rhs.latitude && lhs.longitude == rhs.longitude
+    }
+    
+}
+
 public extension CLLocation {
     
     /// Initializes the location object with the given coordinates.

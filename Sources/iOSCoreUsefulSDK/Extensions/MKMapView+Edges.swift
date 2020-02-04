@@ -45,21 +45,4 @@ public extension MKMapView {
     }
 }
 
-extension CLLocationCoordinate2D: Equatable {
-    
-    /// Compares two coordinates equality.
-    public static func == (lhs: CLLocationCoordinate2D, rhs: CLLocationCoordinate2D) -> Bool {
-        return lhs.latitude == rhs.latitude && lhs.longitude == rhs.longitude
-    }
-    
-}
-
-public extension CLLocationDegrees {
-    
-    /// Converts Degrees into meters value.
-    func inMeters() -> Double {
-        return self * 111 * 1000
-    }
-}
-
 #endif

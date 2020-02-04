@@ -25,8 +25,13 @@ import Foundation
 public extension Int {
     
     /// Converts the integer format Celcius into the Fahrenheit.
-    func toFahrenheit() -> Int {
+    var asFahrenheit: Int {
         return (self * 9/5) + 32
+    }
+    
+    /// Converts the integer format Fahrenheit into the Celcius.
+    var asCelcius: Int {
+        return (self - 32) * 5/9
     }
     
 }
