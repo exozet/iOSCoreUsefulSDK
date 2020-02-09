@@ -1,4 +1,4 @@
-// TableViewViewModelable.swift
+// TableViewModelable.swift
 //
 // Copyright (c) 2020 Burak Uzunboy
 //
@@ -23,9 +23,9 @@
 #if !os(macOS) && !os(watchOS)
 import UIKit
 
-/// Presenter protocol designed as data-sources and delegate for tableviews.
+/// ViewModel protocol designed as data-sources and delegate for tableviews.
 /// The methods can be used for the designated places, or any other purposes.
-public protocol TableViewViewModelable {
+public protocol TableViewModelable {
     
     /// This method designated to be called from `tableView:numberOfRowsInSection:`
     /// - parameter section: Section number of the `tableview`.
@@ -75,7 +75,7 @@ public protocol TableViewViewModelable {
     func moveRowAt(from sourceIndex: IndexPath, to destinationIndex: IndexPath, for tableView: UITableView)
 }
 
-public extension TableViewViewModelable {
+public extension TableViewModelable {
     func numberOfSections() -> Int { return 1 }
     func headerFor(section: Int, for tableView: UITableView) -> UIView? { return nil }
     func footerFor(section: Int, for tableView: UITableView) -> UIView? { return nil }

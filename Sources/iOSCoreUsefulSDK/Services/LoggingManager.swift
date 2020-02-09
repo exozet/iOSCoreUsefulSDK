@@ -27,7 +27,7 @@ import Foundation
 /// The `delegate` property should be set in the app in order to receive given logs.
 open class LoggingManager {
     
-    /// Logs from the all services of the `iOSCoreUsefulSDK` or other services that choses public methods of the `LoggingManager` can be listened from setting a delegate.
+    /// Logs from the all services of the `CoreUsefulSDK` or other services that choses public methods of the `LoggingManager` can be listened from setting a delegate.
     open class var delegate: LoggingDelegate? {
         set { LoggingManager.sharedInstance.logDelegate = newValue }
         get { return LoggingManager.sharedInstance.logDelegate }

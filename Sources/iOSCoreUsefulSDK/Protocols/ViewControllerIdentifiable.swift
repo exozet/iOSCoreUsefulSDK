@@ -26,7 +26,7 @@ import UIKit
 /**
  ViewControllers who conform this protocol can be identified by their class names and initialize.
  */
-public protocol ViewControllerIdentifiable {
+@objc public protocol ViewControllerIdentifiable: class {
     /// The method should return ViewController Identifier in the storyboard.
     static func identifier() -> String
     /// The method should return Storyboard name of the ViewController.
@@ -34,22 +34,6 @@ public protocol ViewControllerIdentifiable {
 }
 
 public extension ViewControllerIdentifiable {
-    
-    /**
-     Returns class name as identifier as default.
-     - returns: Identifier which should be set in **Storyboard**.
-     */
-    static func identifier() -> String {
-        return String(describing: self)
-    }
-    
-    /**
-     Returns storyboardname for initializer
-     - returns: Default value is Main. Override for other storyboards.
-     */
-    static func storyboardName() -> String {
-        return "Main"
-    }
     
     /**
      Initializes view controller.
@@ -65,6 +49,24 @@ public extension ViewControllerIdentifiable {
     
 }
 
-extension UIViewController: ViewControllerIdentifiable { }
+extension UIViewController: ViewControllerIdentifiable {
+    
+    /**
+     Returns class name as identifier as default.
+     - returns: Identifier which should be set in **Storyboard**.
+     */
+    public class func identifier() -> String {
+        return String(describing: self)
+    }
+    
+    /**
+     Returns storyboardname for initializer
+     - returns: Default value is Main. Override for other storyboards.
+     */
+    public class func storyboardName() -> String {
+        return "Main"
+    }
+    
+}
 
 #endif
