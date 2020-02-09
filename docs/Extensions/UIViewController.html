@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>CMTime Extension Reference</title>
+    <title>UIViewController Extension Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset='utf-8'>
@@ -10,8 +10,8 @@
     
   </head>
   <body>
-    <a name="//apple_ref/swift/Extension/CMTime" class="dashAnchor"></a>
-    <a title="CMTime Extension Reference"></a>
+    <a name="//apple_ref/swift/Extension/UIViewController" class="dashAnchor"></a>
+    <a title="UIViewController Extension Reference"></a>
     <header>
       <div class="content-wrapper">
         <p><a href="../index.html"> Docs</a></p>
@@ -21,7 +21,7 @@
       <p id="breadcrumbs">
         <a href="../index.html"> Reference</a>
         <img id="carat" src="../img/carat.png" />
-        CMTime Extension Reference
+        UIViewController Extension Reference
       </p>
     </div>
     <div class="content-wrapper">
@@ -228,13 +228,7 @@
       <article class="main-content">
         <section>
           <section class="section">
-            <h1>CMTime</h1>
-              <div class="declaration">
-                <div class="language">
-                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">extension</span> <span class="kt">CMTime</span></code></pre>
-
-                </div>
-              </div>
+            <h1>UIViewController</h1>
             
           </section>
           <section class="section task-group-section">
@@ -243,9 +237,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So6CMTimea16iOSCoreUsefulSDKE12getTimeLabelSSyF"></a>
-                    <a name="//apple_ref/swift/Method/getTimeLabel()" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So6CMTimea16iOSCoreUsefulSDKE12getTimeLabelSSyF">getTimeLabel()</a>
+                    <a name="/"></a>
+                    <a name="//apple_ref/swift/Method/identifier()" class="dashAnchor"></a>
+                    <a class="token" href="#/">identifier()</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -253,20 +247,8 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns readable time value.</p>
+                        <p>Returns class name as identifier as default.</p>
 
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getTimeLabel</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">String</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Return Value</h4>
-                        <p>time value as <code>String</code></p>
                       </div>
                     </section>
                   </div>
@@ -274,9 +256,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So6CMTimea16iOSCoreUsefulSDKE1poiyA2B_SdtFZ"></a>
-                    <a name="//apple_ref/swift/Method/+(_:_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So6CMTimea16iOSCoreUsefulSDKE1poiyA2B_SdtFZ">+(_:_:)</a>
+                    <a name="/"></a>
+                    <a name="//apple_ref/swift/Method/storyboardName()" class="dashAnchor"></a>
+                    <a class="token" href="#/">storyboardName()</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -284,97 +266,8 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns CMTime with adding specified interval.</p>
+                        <p>Returns storyboardname for initializer</p>
 
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">static</span> <span class="kd">func</span> <span class="o">+</span> <span class="p">(</span><span class="nv">lhs</span><span class="p">:</span> <span class="kt">CMTime</span><span class="p">,</span> <span class="nv">rhs</span><span class="p">:</span> <span class="kt">TimeInterval</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">CMTime</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:So6CMTimea16iOSCoreUsefulSDKE2peoiyyABz_SdtFZ"></a>
-                    <a name="//apple_ref/swift/Method/+=(_:_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So6CMTimea16iOSCoreUsefulSDKE2peoiyyABz_SdtFZ">+=(_:_:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Adds time interval to CMTime object.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">static</span> <span class="kd">func</span> <span class="o">+=</span> <span class="p">(</span><span class="nv">lhs</span><span class="p">:</span> <span class="k">inout</span> <span class="kt">CMTime</span><span class="p">,</span> <span class="nv">rhs</span><span class="p">:</span> <span class="kt">TimeInterval</span><span class="p">)</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:So6CMTimea16iOSCoreUsefulSDKE1soiyA2B_SdtFZ"></a>
-                    <a name="//apple_ref/swift/Method/-(_:_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So6CMTimea16iOSCoreUsefulSDKE1soiyA2B_SdtFZ">-(_:_:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Returns CMTime with decreasing specified interval.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">static</span> <span class="kd">func</span> <span class="o">-</span> <span class="p">(</span><span class="nv">lhs</span><span class="p">:</span> <span class="kt">CMTime</span><span class="p">,</span> <span class="nv">rhs</span><span class="p">:</span> <span class="kt">TimeInterval</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">CMTime</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:So6CMTimea16iOSCoreUsefulSDKE2seoiyyABz_SdtFZ"></a>
-                    <a name="//apple_ref/swift/Method/-=(_:_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So6CMTimea16iOSCoreUsefulSDKE2seoiyyABz_SdtFZ">-=(_:_:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Decreases CMTime object with the given time interval.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">static</span> <span class="kd">func</span> <span class="o">-=</span> <span class="p">(</span><span class="nv">lhs</span><span class="p">:</span> <span class="k">inout</span> <span class="kt">CMTime</span><span class="p">,</span> <span class="nv">rhs</span><span class="p">:</span> <span class="kt">TimeInterval</span><span class="p">)</span></code></pre>
-
-                        </div>
                       </div>
                     </section>
                   </div>

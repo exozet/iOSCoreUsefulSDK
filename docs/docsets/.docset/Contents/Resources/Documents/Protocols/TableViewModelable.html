@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>CMTime Extension Reference</title>
+    <title>TableViewModelable Protocol Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset='utf-8'>
@@ -10,8 +10,8 @@
     
   </head>
   <body>
-    <a name="//apple_ref/swift/Extension/CMTime" class="dashAnchor"></a>
-    <a title="CMTime Extension Reference"></a>
+    <a name="//apple_ref/swift/Protocol/TableViewModelable" class="dashAnchor"></a>
+    <a title="TableViewModelable Protocol Reference"></a>
     <header>
       <div class="content-wrapper">
         <p><a href="../index.html"> Docs</a></p>
@@ -21,7 +21,7 @@
       <p id="breadcrumbs">
         <a href="../index.html"> Reference</a>
         <img id="carat" src="../img/carat.png" />
-        CMTime Extension Reference
+        TableViewModelable Protocol Reference
       </p>
     </div>
     <div class="content-wrapper">
@@ -228,14 +228,10 @@
       <article class="main-content">
         <section>
           <section class="section">
-            <h1>CMTime</h1>
-              <div class="declaration">
-                <div class="language">
-                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">extension</span> <span class="kt">CMTime</span></code></pre>
+            <h1>TableViewModelable</h1>
+            <p>ViewModel protocol designed as data-sources and delegate for tableviews.
+The methods can be used for the designated places, or any other purposes.</p>
 
-                </div>
-              </div>
-            
           </section>
           <section class="section task-group-section">
             <div class="task-group">
@@ -243,9 +239,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So6CMTimea16iOSCoreUsefulSDKE12getTimeLabelSSyF"></a>
-                    <a name="//apple_ref/swift/Method/getTimeLabel()" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So6CMTimea16iOSCoreUsefulSDKE12getTimeLabelSSyF">getTimeLabel()</a>
+                    <a name="/"></a>
+                    <a name="//apple_ref/swift/Method/numberOfRows(in:for:)" class="dashAnchor"></a>
+                    <a class="token" href="#/">numberOfRows(in:for:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -253,20 +249,8 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns readable time value.</p>
+                        <p>This method designated to be called from <code>tableView:numberOfRowsInSection:</code></p>
 
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getTimeLabel</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">String</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Return Value</h4>
-                        <p>time value as <code>String</code></p>
                       </div>
                     </section>
                   </div>
@@ -274,9 +258,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So6CMTimea16iOSCoreUsefulSDKE1poiyA2B_SdtFZ"></a>
-                    <a name="//apple_ref/swift/Method/+(_:_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So6CMTimea16iOSCoreUsefulSDKE1poiyA2B_SdtFZ">+(_:_:)</a>
+                    <a name="/"></a>
+                    <a name="//apple_ref/swift/Method/numberOfSections(for:)" class="dashAnchor"></a>
+                    <a class="token" href="#/">numberOfSections(for:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -284,16 +268,10 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns CMTime with adding specified interval.</p>
+                        <p>This method designated to be called from <code>numberOfSectionsInTableView:</code></p>
 
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">static</span> <span class="kd">func</span> <span class="o">+</span> <span class="p">(</span><span class="nv">lhs</span><span class="p">:</span> <span class="kt">CMTime</span><span class="p">,</span> <span class="nv">rhs</span><span class="p">:</span> <span class="kt">TimeInterval</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">CMTime</span></code></pre>
+<p>In default, returns 1.</p>
 
-                        </div>
                       </div>
                     </section>
                   </div>
@@ -301,9 +279,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So6CMTimea16iOSCoreUsefulSDKE2peoiyyABz_SdtFZ"></a>
-                    <a name="//apple_ref/swift/Method/+=(_:_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So6CMTimea16iOSCoreUsefulSDKE2peoiyyABz_SdtFZ">+=(_:_:)</a>
+                    <a name="/"></a>
+                    <a name="//apple_ref/swift/Method/cellForRow(at:for:)" class="dashAnchor"></a>
+                    <a class="token" href="#/">cellForRow(at:for:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -311,16 +289,8 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Adds time interval to CMTime object.</p>
+                        <p>This method designated to be called from <code>tableView:cellForRowAtIndexPath:</code></p>
 
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">static</span> <span class="kd">func</span> <span class="o">+=</span> <span class="p">(</span><span class="nv">lhs</span><span class="p">:</span> <span class="k">inout</span> <span class="kt">CMTime</span><span class="p">,</span> <span class="nv">rhs</span><span class="p">:</span> <span class="kt">TimeInterval</span><span class="p">)</span></code></pre>
-
-                        </div>
                       </div>
                     </section>
                   </div>
@@ -328,26 +298,28 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So6CMTimea16iOSCoreUsefulSDKE1soiyA2B_SdtFZ"></a>
-                    <a name="//apple_ref/swift/Method/-(_:_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So6CMTimea16iOSCoreUsefulSDKE1soiyA2B_SdtFZ">-(_:_:)</a>
+                    <a name="/"></a>
+                    <a name="//apple_ref/swift/Method/headerFor(section:for:)" class="dashAnchor"></a>
+                    <a class="token" href="#/">headerFor(section:for:)</a>
                     </code>
+                      <span class="declaration-note">
+                        Default implementation
+                      </span>
                   </div>
                   <div class="height-container">
                     <div class="pointer-container"></div>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns CMTime with decreasing specified interval.</p>
+                        <p>This method designated to be called from <code>tableView:viewForHeaderInSection:</code>in delegate,
+when <code>tableView:titleForHeaderInSection:</code> in datasource returns nothing.</p>
+
+<p>In default, returns <code>nil</code>.</p>
 
                       </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">static</span> <span class="kd">func</span> <span class="o">-</span> <span class="p">(</span><span class="nv">lhs</span><span class="p">:</span> <span class="kt">CMTime</span><span class="p">,</span> <span class="nv">rhs</span><span class="p">:</span> <span class="kt">TimeInterval</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">CMTime</span></code></pre>
-
-                        </div>
+                      <h4>Default Implementation</h4>
+                      <div class="default_impl abstract">
+                        
                       </div>
                     </section>
                   </div>
@@ -355,26 +327,137 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So6CMTimea16iOSCoreUsefulSDKE2seoiyyABz_SdtFZ"></a>
-                    <a name="//apple_ref/swift/Method/-=(_:_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So6CMTimea16iOSCoreUsefulSDKE2seoiyyABz_SdtFZ">-=(_:_:)</a>
+                    <a name="/"></a>
+                    <a name="//apple_ref/swift/Method/footerFor(section:for:)" class="dashAnchor"></a>
+                    <a class="token" href="#/">footerFor(section:for:)</a>
                     </code>
+                      <span class="declaration-note">
+                        Default implementation
+                      </span>
                   </div>
                   <div class="height-container">
                     <div class="pointer-container"></div>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Decreases CMTime object with the given time interval.</p>
+                        <p>This method designated to be called from <code>tableView:viewForFooterInSection:</code>in delegate,
+when <code>tableView:titleForFooterInSection:</code> in datasource returns nothing.</p>
+
+<p>In default, returns <code>nil</code>.</p>
 
                       </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">static</span> <span class="kd">func</span> <span class="o">-=</span> <span class="p">(</span><span class="nv">lhs</span><span class="p">:</span> <span class="k">inout</span> <span class="kt">CMTime</span><span class="p">,</span> <span class="nv">rhs</span><span class="p">:</span> <span class="kt">TimeInterval</span><span class="p">)</span></code></pre>
+                      <h4>Default Implementation</h4>
+                      <div class="default_impl abstract">
+                        
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/"></a>
+                    <a name="//apple_ref/swift/Method/canEditRow(at:for:)" class="dashAnchor"></a>
+                    <a class="token" href="#/">canEditRow(at:for:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Default implementation
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This method designated to be called from <code>tableView:canEditRowAtIndexPath:</code></p>
 
-                        </div>
+<p>In default, returns <code>false</code>.</p>
+
+                      </div>
+                      <h4>Default Implementation</h4>
+                      <div class="default_impl abstract">
+                        
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/"></a>
+                    <a name="//apple_ref/swift/Method/canMoveRow(at:for:)" class="dashAnchor"></a>
+                    <a class="token" href="#/">canMoveRow(at:for:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Default implementation
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This method designated to be called from <code>tableView:canMoveRowAtIndexPath:</code></p>
+
+<p>In default, returns <code>false</code>.</p>
+
+                      </div>
+                      <h4>Default Implementation</h4>
+                      <div class="default_impl abstract">
+                        
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/"></a>
+                    <a name="//apple_ref/swift/Method/moveRowAt(from:to:for:)" class="dashAnchor"></a>
+                    <a class="token" href="#/">moveRowAt(from:to:for:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Default implementation
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This method designated to be called from <code>tableView:moveRowAtIndexPath:toIndexPath:</code></p>
+
+<p>In default, does nothing.</p>
+
+                      </div>
+                      <h4>Default Implementation</h4>
+                      <div class="default_impl abstract">
+                        
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/"></a>
+                    <a name="//apple_ref/swift/Method/numberOfSections()" class="dashAnchor"></a>
+                    <a class="token" href="#/">numberOfSections()</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
                       </div>
                     </section>
                   </div>

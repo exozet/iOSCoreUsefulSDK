@@ -91,9 +91,6 @@
                 <a href="Extensions/MKMapView.html">MKMapView</a>
               </li>
               <li class="nav-group-task">
-                <a href="Extensions/MKMapView.html">MKMapView</a>
-              </li>
-              <li class="nav-group-task">
                 <a href="Extensions/NSAttributedString.html">NSAttributedString</a>
               </li>
               <li class="nav-group-task">
@@ -166,6 +163,9 @@
                 <a href="Extensions/UIView.html">UIView</a>
               </li>
               <li class="nav-group-task">
+                <a href="Extensions/UIViewController.html">UIViewController</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Extensions/URL.html">URL</a>
               </li>
             </ul>
@@ -201,10 +201,10 @@
                 <a href="Protocols/TableCellIdentifiable.html">TableCellIdentifiable</a>
               </li>
               <li class="nav-group-task">
-                <a href="Protocols/TableViewPresentable.html">TableViewPresentable</a>
+                <a href="Protocols/TableViewModelable.html">TableViewModelable</a>
               </li>
               <li class="nav-group-task">
-                <a href="Protocols/TableViewViewModelable.html">TableViewViewModelable</a>
+                <a href="Protocols/TableViewPresentable.html">TableViewPresentable</a>
               </li>
               <li class="nav-group-task">
                 <a href="Protocols/ViewControllerIdentifiable.html">ViewControllerIdentifiable</a>
@@ -228,20 +228,419 @@
         <section>
           <section class="section">
             
-            <h1 id='ioscoreusefulsdk' class='heading'>iOSCoreUsefulSDK</h1>
+            <h1 id='coreusefulsdk-for-ios' class='heading'>CoreUsefulSDK for iOS</h1>
 <h3 id='a-most-useful-sdk-written-for-ios-projects' class='heading'>A most useful SDK written for iOS Projects.</h3>
 
 <p>Check out the <code>docs/index.html</code> file to explore all useful methods.</p>
 <h2 id='installation' class='heading'>Installation</h2>
 
-<p><strong>iOSCoreUsefulSDK</strong> uses new Swift Package Manager which is easiest way introduced for iOS projects since from the beginning. </p>
+<p><strong>CoreUsefulSDK</strong> uses new Swift Package Manager which is easiest way introduced for iOS projects since from the beginning. </p>
 
 <p>From Xcode simply select <code>File &gt; Swift Packages &gt; Add Package Dependency...</code> and paste <code>https://github.com/exozet/iOSCoreUsefulSDK</code> to search field. You can specify rules according to your preferences and you are ready to use. </p>
+<h2 id='useful-extensions-collection' class='heading'>Useful Extensions Collection</h2>
+
+<p>The library itself contains more than <strong>100</strong> extensions, which are not only as a <em>placeholder</em>, but really <strong>useful</strong> to contain. </p>
+<h3 id='still-in-progress' class='heading'>Still in progress.</h3>
+<h3 id='array-extensions-available-ios-apple-tv-watchos-macos' class='heading'>Array Extensions (Available iOS, Apple TV, watchOS, macOS)</h3>
+<pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">get</span><span class="p">(</span><span class="nv">index</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Element</span><span class="p">?</span>
+</code></pre>
+
+<p>Returns element at the index, if index is valid.
+<br><br></p>
+<pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">insert</span><span class="p">(</span><span class="n">_</span> <span class="nv">nullableElement</span><span class="p">:</span> <span class="kt">Element</span><span class="p">?)</span>
+</code></pre>
+
+<p>Appends element to array if its not <code>nil</code>. So that, you don&rsquo;t need to check beforehand.
+<br><br></p>
+<pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">insert</span><span class="p">(</span><span class="n">_</span> <span class="nv">nullableArray</span><span class="p">:</span> <span class="p">[</span><span class="kt">Element</span><span class="p">]?)</span> 
+</code></pre>
+
+<p>Appends elements into the current array.
+<br><br></p>
+<pre class="highlight swift"><code><span class="kd">static</span> <span class="kd">func</span> <span class="o">+</span> <span class="p">(</span><span class="kt">Array</span><span class="o">&lt;</span><span class="kt">Element</span><span class="o">&gt;</span><span class="p">,</span> <span class="kt">Element</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Array</span><span class="o">&lt;</span><span class="kt">Element</span><span class="o">&gt;</span>
+
+<span class="c1">// example usage</span>
+<span class="k">let</span> <span class="nv">newArray</span> <span class="o">=</span> <span class="p">[</span><span class="s">"1"</span><span class="p">,</span> <span class="s">"2"</span><span class="p">,</span> <span class="s">"3"</span><span class="p">]</span> <span class="o">+</span> <span class="s">"4"</span>
+</code></pre>
+
+<p>Inserts the element into given array by using <code>+</code> operator.
+<br><br></p>
+<pre class="highlight swift"><code><span class="kd">static</span> <span class="kd">func</span> <span class="o">+=</span> <span class="p">(</span><span class="kt">Array</span><span class="o">&lt;</span><span class="kt">Element</span><span class="o">&gt;</span><span class="p">,</span> <span class="kt">Element</span><span class="p">?)</span>
+
+<span class="c1">// example usage</span>
+<span class="k">var</span> <span class="nv">array</span> <span class="o">=</span> <span class="p">[</span><span class="s">"1"</span><span class="p">,</span> <span class="s">"2"</span><span class="p">,</span> <span class="s">"3"</span><span class="p">]</span>
+<span class="n">array</span> <span class="o">+=</span> <span class="s">"4"</span>
+</code></pre>
+
+<p>Inserts the element into given array by using <code>+=</code> operator.
+<br><br></p>
+<h3 id='avplayer-extensions-available-ios-apple-tv-macos' class='heading'>AVPlayer Extensions (Available iOS, Apple TV, macOS)</h3>
+<pre class="highlight swift"><code><span class="k">var</span> <span class="nv">isPlaying</span><span class="p">:</span> <span class="kt">Bool</span>
+</code></pre>
+
+<p>Checks rate and error state of the player, and returns <code>true</code> if player conforms and started to play.
+<br><br></p>
+<h3 id='bundle-extensions-available-ios-apple-tv-watchos-macos' class='heading'>Bundle Extensions (Available iOS, Apple TV, watchOS, macOS)</h3>
+<pre class="highlight swift"><code><span class="kd">class</span> <span class="k">var</span> <span class="nv">versionInfo</span><span class="p">:</span> <span class="kt">String</span>
+</code></pre>
+
+<p>Returns user friendly app version string.
+<br><br></p>
+<h3 id='cgsize-extensions-available-ios-apple-tv-watchos-macos' class='heading'>CGSize Extensions (Available iOS, Apple TV, watchOS, macOS)</h3>
+<pre class="highlight swift"><code><span class="kd">static</span> <span class="kd">func</span> <span class="o">-</span> <span class="p">(</span><span class="kt">CGSize</span><span class="p">,</span> <span class="kt">CGFloat</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">CGSize</span>
+</code></pre>
+
+<p>Reduces the width and height with the given amount.</p>
+<pre class="highlight swift"><code><span class="c1">// How to use:</span>
+<span class="k">let</span> <span class="nv">size</span> <span class="o">=</span> <span class="kt">CGSize</span><span class="p">(</span><span class="nv">width</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span> <span class="nv">height</span><span class="p">:</span> <span class="mi">5</span><span class="p">)</span>
+<span class="k">let</span> <span class="nv">newSize</span> <span class="o">=</span> <span class="n">size</span> <span class="o">-</span> <span class="mi">3</span>
+</code></pre>
+
+<p><br></p>
+<pre class="highlight swift"><code><span class="kd">static</span> <span class="kd">func</span> <span class="o">+</span> <span class="p">(</span><span class="kt">CGSize</span><span class="p">,</span> <span class="kt">CGFloat</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">CGSize</span>
+</code></pre>
+
+<p>Increases the width and height with the given amount.</p>
+<pre class="highlight swift"><code><span class="c1">// How to use:</span>
+<span class="k">let</span> <span class="nv">size</span> <span class="o">=</span> <span class="kt">CGSize</span><span class="p">(</span><span class="nv">width</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span> <span class="nv">height</span><span class="p">:</span> <span class="mi">5</span><span class="p">)</span>
+<span class="k">let</span> <span class="nv">newSize</span> <span class="o">=</span> <span class="n">size</span> <span class="o">+</span> <span class="mi">3</span>
+</code></pre>
+
+<p><br></p>
+<pre class="highlight swift"><code><span class="kd">static</span> <span class="kd">func</span> <span class="o">+=</span> <span class="p">(</span><span class="kt">CGSize</span><span class="p">,</span> <span class="kt">CGSize</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">CGSize</span>
+</code></pre>
+
+<p>Adds right handside to left handside.</p>
+<pre class="highlight swift"><code><span class="c1">// How to use:</span>
+<span class="k">var</span> <span class="nv">size</span> <span class="o">=</span> <span class="kt">CGSize</span><span class="p">(</span><span class="nv">width</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span> <span class="nv">height</span><span class="p">:</span> <span class="mi">5</span><span class="p">)</span>
+<span class="n">size</span> <span class="o">+=</span> <span class="kt">CGSize</span><span class="p">(</span><span class="nv">width</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="nv">height</span><span class="p">:</span> <span class="mi">3</span><span class="p">)</span>
+</code></pre>
+
+<p><br></p>
+<pre class="highlight swift"><code><span class="kd">static</span> <span class="kd">func</span> <span class="o">-=</span> <span class="p">(</span><span class="kt">CGSize</span><span class="p">,</span> <span class="kt">CGSize</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">CGSize</span>
+</code></pre>
+
+<p>Decreases the size with the given right handside.</p>
+<pre class="highlight swift"><code><span class="c1">// How to use:</span>
+<span class="k">var</span> <span class="nv">size</span> <span class="o">=</span> <span class="kt">CGSize</span><span class="p">(</span><span class="nv">width</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span> <span class="nv">height</span><span class="p">:</span> <span class="mi">5</span><span class="p">)</span>
+<span class="n">size</span> <span class="o">-=</span> <span class="kt">CGSize</span><span class="p">(</span><span class="nv">width</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="nv">height</span><span class="p">:</span> <span class="mi">3</span><span class="p">)</span>
+</code></pre>
+
+<p><br></p>
+<pre class="highlight swift"><code><span class="kd">static</span> <span class="kd">func</span> <span class="o">+=</span> <span class="p">(</span><span class="kt">CGSize</span><span class="p">,</span> <span class="kt">CGFloat</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">CGSize</span>
+<span class="kd">static</span> <span class="kd">func</span> <span class="o">+=</span> <span class="p">(</span><span class="kt">CGSize</span><span class="p">,</span> <span class="kt">Double</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">CGSize</span>
+<span class="kd">static</span> <span class="kd">func</span> <span class="o">+=</span> <span class="p">(</span><span class="kt">CGSize</span><span class="p">,</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">CGSize</span>
+</code></pre>
+
+<p>Adds right handside to left handside.</p>
+<pre class="highlight swift"><code><span class="c1">// How to use:</span>
+<span class="k">var</span> <span class="nv">size</span> <span class="o">=</span> <span class="kt">CGSize</span><span class="p">(</span><span class="nv">width</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span> <span class="nv">height</span><span class="p">:</span> <span class="mi">5</span><span class="p">)</span>
+<span class="n">size</span> <span class="o">+=</span> <span class="mi">3</span>
+</code></pre>
+
+<p><br></p>
+<pre class="highlight swift"><code><span class="kd">static</span> <span class="kd">func</span> <span class="o">-=</span> <span class="p">(</span><span class="kt">CGSize</span><span class="p">,</span> <span class="kt">CGFloat</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">CGSize</span>
+<span class="kd">static</span> <span class="kd">func</span> <span class="o">-=</span> <span class="p">(</span><span class="kt">CGSize</span><span class="p">,</span> <span class="kt">Double</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">CGSize</span>
+<span class="kd">static</span> <span class="kd">func</span> <span class="o">-=</span> <span class="p">(</span><span class="kt">CGSize</span><span class="p">,</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">CGSize</span>
+</code></pre>
+
+<p>Decreases the size with the given right handside.</p>
+<pre class="highlight swift"><code><span class="c1">// How to use:</span>
+<span class="k">var</span> <span class="nv">size</span> <span class="o">=</span> <span class="kt">CGSize</span><span class="p">(</span><span class="nv">width</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span> <span class="nv">height</span><span class="p">:</span> <span class="mi">5</span><span class="p">)</span>
+<span class="n">size</span> <span class="o">-=</span> <span class="mi">3</span>
+</code></pre>
+
+<p><br></p>
+<h3 id='cgpoint-extensions-available-ios-apple-tv-watchos-macos' class='heading'>CGPoint Extensions (Available iOS, Apple TV, watchOS, macOS)</h3>
+<pre class="highlight swift"><code><span class="kd">static</span> <span class="kd">func</span> <span class="o">+</span> <span class="p">(</span><span class="kt">CGPoint</span><span class="p">,</span> <span class="kt">CGFloat</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">CGPoint</span>
+</code></pre>
+
+<p>Increases the X and Y points with the given amount.</p>
+<pre class="highlight swift"><code><span class="c1">// How to use:</span>
+<span class="k">let</span> <span class="nv">point</span> <span class="o">=</span> <span class="kt">CGPoint</span><span class="p">(</span><span class="nv">x</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span> <span class="nv">y</span><span class="p">:</span> <span class="mi">5</span><span class="p">)</span>
+<span class="k">let</span> <span class="nv">newPoint</span> <span class="o">=</span> <span class="n">point</span> <span class="o">+</span> <span class="mi">3</span>
+</code></pre>
+
+<p><br></p>
+<pre class="highlight swift"><code><span class="kd">static</span> <span class="kd">func</span> <span class="o">-</span> <span class="p">(</span><span class="kt">CGPoint</span><span class="p">,</span> <span class="kt">CGFloat</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">CGPoint</span>
+</code></pre>
+
+<p>Reduces the X and Y points with the given amount.</p>
+<pre class="highlight swift"><code><span class="c1">// How to use:</span>
+<span class="k">let</span> <span class="nv">point</span> <span class="o">=</span> <span class="kt">CGPoint</span><span class="p">(</span><span class="nv">x</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span> <span class="nv">y</span><span class="p">:</span> <span class="mi">5</span><span class="p">)</span>
+<span class="k">let</span> <span class="nv">newPoint</span> <span class="o">=</span> <span class="n">point</span> <span class="o">-</span> <span class="mi">3</span>
+</code></pre>
+
+<p><br></p>
+<pre class="highlight swift"><code><span class="kd">static</span> <span class="kd">func</span> <span class="o">+</span> <span class="p">(</span><span class="kt">CGPoint</span><span class="p">,</span> <span class="kt">CGPoint</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">CGPoint</span>
+</code></pre>
+
+<p>Adds two point.</p>
+<pre class="highlight swift"><code><span class="c1">// How to use:</span>
+<span class="k">let</span> <span class="nv">newPoint</span> <span class="o">=</span> <span class="kt">CGPoint</span><span class="p">(</span><span class="nv">x</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span> <span class="nv">y</span><span class="p">:</span> <span class="mi">5</span><span class="p">)</span> <span class="o">+</span> <span class="kt">CGPoint</span><span class="p">(</span><span class="nv">x</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="nv">y</span><span class="p">:</span><span class="mi">3</span><span class="p">)</span>
+</code></pre>
+
+<p><br></p>
+<pre class="highlight swift"><code><span class="kd">static</span> <span class="kd">func</span> <span class="o">-</span> <span class="p">(</span><span class="kt">CGPoint</span><span class="p">,</span> <span class="kt">CGPoint</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">CGPoint</span>
+</code></pre>
+
+<p>Reduces the point with the given point.</p>
+<pre class="highlight swift"><code><span class="c1">// How to use:</span>
+<span class="k">let</span> <span class="nv">newPoint</span> <span class="o">=</span> <span class="kt">CGPoint</span><span class="p">(</span><span class="nv">x</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span> <span class="nv">y</span><span class="p">:</span> <span class="mi">5</span><span class="p">)</span> <span class="o">-</span> <span class="kt">CGPoint</span><span class="p">(</span><span class="nv">x</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="nv">y</span><span class="p">:</span><span class="mi">3</span><span class="p">)</span>
+</code></pre>
+
+<p><br></p>
+<pre class="highlight swift"><code><span class="kd">func</span> <span class="o">+=</span> <span class="p">(</span><span class="kt">CGPoint</span><span class="p">,</span> <span class="kt">CGPoint</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">CGPoint</span>
+</code></pre>
+
+<p>Adds right handside to left handside.</p>
+<pre class="highlight swift"><code><span class="c1">// How to use:</span>
+<span class="k">var</span> <span class="nv">point</span> <span class="o">=</span> <span class="kt">CGPoint</span><span class="p">(</span><span class="nv">x</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span> <span class="nv">y</span><span class="p">:</span> <span class="mi">5</span><span class="p">)</span>
+<span class="n">point</span> <span class="o">+=</span> <span class="kt">CGPoint</span><span class="p">(</span><span class="nv">x</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="nv">y</span><span class="p">:</span> <span class="mi">3</span><span class="p">)</span>
+</code></pre>
+
+<p><br></p>
+<pre class="highlight swift"><code><span class="kd">static</span> <span class="kd">func</span> <span class="o">-=</span> <span class="p">(</span><span class="kt">CGPoint</span><span class="p">,</span> <span class="kt">CGPoint</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">CGPoint</span>
+</code></pre>
+
+<p>Decreases left handside with right handside.</p>
+<pre class="highlight swift"><code><span class="c1">// How to use:</span>
+<span class="k">var</span> <span class="nv">point</span> <span class="o">=</span> <span class="kt">CGPoint</span><span class="p">(</span><span class="nv">x</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span> <span class="nv">y</span><span class="p">:</span> <span class="mi">5</span><span class="p">)</span>
+<span class="n">point</span> <span class="o">-=</span> <span class="kt">CGPoint</span><span class="p">(</span><span class="nv">x</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="nv">y</span><span class="p">:</span> <span class="mi">3</span><span class="p">)</span>
+</code></pre>
+
+<p><br></p>
+<pre class="highlight swift"><code><span class="kd">static</span> <span class="kd">func</span> <span class="o">+=</span> <span class="p">(</span><span class="kt">CGPoint</span><span class="p">,</span> <span class="kt">CGFloat</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">CGPoint</span>
+<span class="kd">static</span> <span class="kd">func</span> <span class="o">+=</span> <span class="p">(</span><span class="kt">CGPoint</span><span class="p">,</span> <span class="kt">Double</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">CGPoint</span>
+<span class="kd">static</span> <span class="kd">func</span> <span class="o">+=</span> <span class="p">(</span><span class="kt">CGPoint</span><span class="p">,</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">CGPoint</span>
+</code></pre>
+
+<p>Adds right handside to left handside.</p>
+<pre class="highlight swift"><code><span class="c1">// How to use:</span>
+<span class="k">var</span> <span class="nv">point</span> <span class="o">=</span> <span class="kt">CGPoint</span><span class="p">(</span><span class="nv">x</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span> <span class="nv">y</span><span class="p">:</span> <span class="mi">5</span><span class="p">)</span>
+<span class="n">point</span> <span class="o">+=</span> <span class="mi">3</span>
+</code></pre>
+
+<p><br></p>
+<pre class="highlight swift"><code><span class="kd">static</span> <span class="kd">func</span> <span class="o">-=</span> <span class="p">(</span><span class="kt">CGPoint</span><span class="p">,</span> <span class="kt">CGFloat</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">CGPoint</span>
+<span class="kd">static</span> <span class="kd">func</span> <span class="o">-=</span> <span class="p">(</span><span class="kt">CGPoint</span><span class="p">,</span> <span class="kt">Double</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">CGPoint</span>
+<span class="kd">static</span> <span class="kd">func</span> <span class="o">-=</span> <span class="p">(</span><span class="kt">CGPoint</span><span class="p">,</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">CGPoint</span>
+</code></pre>
+
+<p>Decreases the size with the given right handside.</p>
+<pre class="highlight swift"><code><span class="c1">// How to use:</span>
+<span class="k">var</span> <span class="nv">point</span> <span class="o">=</span> <span class="kt">CGPoint</span><span class="p">(</span><span class="nv">x</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span> <span class="nv">y</span><span class="p">:</span> <span class="mi">5</span><span class="p">)</span>
+<span class="n">point</span> <span class="o">-=</span> <span class="mi">3</span>
+</code></pre>
+
+<p><br></p>
+<h3 id='cllocation-extensions-available-ios-apple-tv-watchos-macos' class='heading'>CLLocation Extensions (Available iOS, Apple TV, watchOS, macOS)</h3>
+<pre class="highlight swift"><code><span class="nf">init</span><span class="p">(</span><span class="nv">coordinate</span><span class="p">:</span> <span class="kt">CLLocationCoordinate2D</span><span class="p">)</span>
+</code></pre>
+
+<p>Initializes the location object with the given coordinates.
+<br><br></p>
+<h3 id='cllocationcoordinate2d-extensions-available-ios-apple-tv-watchos-macos' class='heading'>CLLocationCoordinate2D Extensions (Available iOS, Apple TV, watchOS, macOS)</h3>
+<pre class="highlight swift"><code><span class="k">var</span> <span class="nv">logDescription</span><span class="p">:</span> <span class="kt">String</span>
+</code></pre>
+
+<p>Represents latitude and longitude information in a readable way.
+<br><br></p>
+<pre class="highlight swift"><code><span class="kd">static</span> <span class="kd">func</span> <span class="o">==</span> <span class="p">(</span><span class="kt">CLLocationCoordinate2D</span><span class="p">,</span> <span class="kt">CLLocationCoordinate2D</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span>
+</code></pre>
+
+<p>CLLocationCoordinate conforms equality, and gives possibility to compare two of them.
+<br><br></p>
+<h3 id='cllocationdegrees-extensions-available-ios-apple-tv-watchos-macos' class='heading'>CLLocationDegrees Extensions (Available iOS, Apple TV, watchOS, macOS)</h3>
+<pre class="highlight swift"><code><span class="k">var</span> <span class="nv">inMeters</span><span class="p">:</span> <span class="kt">Double</span>
+</code></pre>
+
+<p>Converts Degrees into meters value.
+<br><br></p>
+<h3 id='cmtime-extensions-available-ios-apple-tv-macos' class='heading'>CMTime Extensions (Available iOS, Apple TV, macOS)</h3>
+<pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getTimeLabel</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">String</span>
+</code></pre>
+
+<p>Returns readable time tabel from minutes and seconds. (e.g. XX:XX)
+<br><br></p>
+<pre class="highlight swift"><code><span class="kd">static</span> <span class="kd">func</span> <span class="o">+</span> <span class="p">(</span><span class="kt">CMTime</span><span class="p">,</span> <span class="kt">TimeInterval</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">CMTime</span>
+</code></pre>
+
+<p>Returns CMTime with adding specified interval.</p>
+<pre class="highlight swift"><code><span class="c1">// How to use:</span>
+<span class="k">let</span> <span class="nv">newTime</span> <span class="o">=</span> <span class="kt">CMTime</span><span class="p">(</span><span class="nv">seconds</span><span class="p">:</span> <span class="mi">50</span><span class="p">,</span> <span class="nv">preferredTimescale</span><span class="p">:</span> <span class="o">.</span><span class="n">min</span><span class="p">)</span> <span class="o">+</span> <span class="mi">50</span>
+</code></pre>
+
+<p><br></p>
+<pre class="highlight swift"><code><span class="kd">static</span> <span class="kd">func</span> <span class="o">-</span> <span class="p">(</span><span class="kt">CMTime</span><span class="p">,</span> <span class="kt">TimeInterval</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">CMTime</span>
+</code></pre>
+
+<p>Returns CMTime with decreasing specified interval.</p>
+<pre class="highlight swift"><code><span class="c1">// How to use:</span>
+<span class="k">let</span> <span class="nv">newTime</span> <span class="o">=</span> <span class="kt">CMTime</span><span class="p">(</span><span class="nv">seconds</span><span class="p">:</span> <span class="mi">50</span><span class="p">,</span> <span class="nv">preferredTimescale</span><span class="p">:</span> <span class="o">.</span><span class="n">min</span><span class="p">)</span> <span class="o">-</span> <span class="mi">50</span>
+</code></pre>
+
+<p><br></p>
+<pre class="highlight swift"><code><span class="kd">static</span> <span class="kd">func</span> <span class="o">+=</span> <span class="p">(</span><span class="kt">CMTime</span><span class="p">,</span> <span class="kt">TimeInterval</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">CMTime</span>
+</code></pre>
+
+<p>Adds time interval to CMTime object.</p>
+<pre class="highlight swift"><code><span class="c1">// How to use:</span>
+<span class="k">var</span> <span class="nv">time</span> <span class="o">=</span> <span class="kt">CMTime</span><span class="p">(</span><span class="nv">seconds</span><span class="p">:</span> <span class="mi">50</span><span class="p">,</span> <span class="nv">preferredTimescale</span><span class="p">:</span> <span class="o">.</span><span class="n">min</span><span class="p">)</span>
+<span class="n">time</span> <span class="o">+=</span> <span class="mi">50</span>
+</code></pre>
+
+<p><br></p>
+<pre class="highlight swift"><code><span class="kd">static</span> <span class="kd">func</span> <span class="o">-=</span> <span class="p">(</span><span class="kt">CMTime</span><span class="p">,</span> <span class="kt">TimeInterval</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">CMTime</span>
+</code></pre>
+
+<p>Decreases CMTime object with the given time interval.</p>
+<pre class="highlight swift"><code><span class="c1">// How to use:</span>
+<span class="k">var</span> <span class="nv">time</span> <span class="o">=</span> <span class="kt">CMTime</span><span class="p">(</span><span class="nv">seconds</span><span class="p">:</span> <span class="mi">50</span><span class="p">,</span> <span class="nv">preferredTimescale</span><span class="p">:</span> <span class="o">.</span><span class="n">min</span><span class="p">)</span>
+<span class="n">time</span> <span class="o">-=</span> <span class="mi">50</span>
+</code></pre>
+
+<p><br></p>
+<h3 id='date-extensions-available-ios-apple-tv-watchos-macos' class='heading'>Date Extensions (Available iOS, Apple TV, watchOS, macOS)</h3>
+<pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">isSameDay</span><span class="p">(</span><span class="kt">Date</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span>
+</code></pre>
+
+<p>Returns <code>true</code>, if it belongs to the same day with the given date value.
+<br><br></p>
+<pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">format</span><span class="p">(</span><span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">String</span>
+</code></pre>
+
+<p>Returns date object with the given format as string.
+<br><br></p>
+<pre class="highlight swift"><code><span class="k">var</span> <span class="nv">isToday</span><span class="p">:</span> <span class="kt">Bool</span>
+</code></pre>
+
+<p>Returns <code>true</code> if date corresponds today.
+<br><br></p>
+<pre class="highlight swift"><code><span class="k">var</span> <span class="nv">isYesterday</span><span class="p">:</span> <span class="kt">Bool</span>
+</code></pre>
+
+<p>Returns <code>true</code> if date corresponds yesterday.
+<br><br></p>
+<pre class="highlight swift"><code><span class="k">var</span> <span class="nv">isTomorrow</span><span class="p">:</span> <span class="kt">Bool</span>
+</code></pre>
+
+<p>Returns <code>true</code> if date corresponds tomorrow.
+<br><br></p>
+<pre class="highlight swift"><code><span class="k">var</span> <span class="nv">isTheDayAfterTomorrow</span><span class="p">:</span> <span class="kt">Bool</span>
+</code></pre>
+
+<p>Returns <code>true</code> if date corresponds the day after tomorrow.
+<br><br></p>
+<h3 id='double-extensions-available-ios-apple-tv-watchos-macos' class='heading'>Double Extensions (Available iOS, Apple TV, watchOS, macOS)</h3>
+<pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">rounded</span><span class="p">(</span><span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Double</span>
+</code></pre>
+
+<p>Rounds the double to decimal places value.
+<br><br></p>
+<h3 id='int-extensions-available-ios-apple-tv-watchos-macos' class='heading'>Int Extensions (Available iOS, Apple TV, watchOS, macOS)</h3>
+<pre class="highlight swift"><code><span class="k">var</span> <span class="nv">asFahrenheit</span><span class="p">:</span> <span class="kt">Int</span>
+</code></pre>
+
+<p>Converts the integer format Celcius into the Fahrenheit.
+<br><br></p>
+<pre class="highlight swift"><code><span class="k">var</span> <span class="nv">asCelcius</span><span class="p">:</span> <span class="kt">Int</span>
+</code></pre>
+
+<p>Converts the integer format Fahrenheit into the Celcius.
+<br><br></p>
+<h3 id='mkmapview-extensions-available-ios-apple-tv-macos' class='heading'>MKMapView Extensions (Available iOS, Apple TV, macOS)</h3>
+<pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">setCenter</span><span class="p">(</span><span class="nv">offset</span><span class="p">:</span> <span class="kt">CGPoint</span><span class="p">,</span> <span class="nv">coordinate</span><span class="p">:</span> <span class="kt">CLLocationCoordinate2D</span><span class="p">,</span> <span class="nv">animated</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Double</span>
+</code></pre>
+
+<p>Sets center of the mapview with the given offset.
+<br><br></p>
+<pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">edgePoints</span><span class="p">(</span><span class="nv">dx</span><span class="p">:</span> <span class="kt">CGFloat</span><span class="p">,</span> <span class="nv">dy</span><span class="p">:</span> <span class="kt">CGFloat</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Edges</span>
+</code></pre>
+
+<p>Converts Edge points with the given insets.
+<br><br></p>
+<h3 id='nsattributedstring-extensions-available-ios-apple-tv-watchos-macos' class='heading'>NSAttributedString Extensions (Available iOS, Apple TV, watchOS, macOS)</h3>
+<h3 id='dictionary-extensions-available-ios-apple-tv-watchos-macos' class='heading'>Dictionary Extensions (Available iOS, Apple TV, watchOS, macOS)</h3>
+<h3 id='nserror-extensions-available-ios-apple-tv-watchos-macos' class='heading'>NSError Extensions (Available iOS, Apple TV, watchOS, macOS)</h3>
+<h3 id='nsobject-extensions-available-ios-apple-tv-watchos-macos' class='heading'>NSObject Extensions (Available iOS, Apple TV, watchOS, macOS)</h3>
+<h3 id='string-extensions-available-ios-apple-tv-watchos-macos' class='heading'>String Extensions (Available iOS, Apple TV, watchOS, macOS)</h3>
+<h3 id='uialertaction-extensions-available-ios-apple-tv' class='heading'>UIAlertAction Extensions (Available iOS, Apple TV)</h3>
+<h3 id='uialertcontroller-extensions-available-ios-apple-tv' class='heading'>UIAlertController Extensions (Available iOS, Apple TV)</h3>
+<h3 id='uiapplication-extensions-available-ios-apple-tv' class='heading'>UIApplication Extensions (Available iOS, Apple TV)</h3>
+<h3 id='uicollectionview-extensions-available-ios-apple-tv' class='heading'>UICollectionView Extensions (Available iOS, Apple TV)</h3>
+<h3 id='uicolor-extensions-available-ios-apple-tv-watchos' class='heading'>UIColor Extensions (Available iOS, Apple TV, watchOS)</h3>
+<h3 id='uidevice-extensions-available-ios-apple-tv' class='heading'>UIDevice Extensions (Available iOS, Apple TV)</h3>
+<h3 id='uifont-extensions-available-ios-apple-tv-watchos' class='heading'>UIFont Extensions (Available iOS, Apple TV, watchOS)</h3>
+<h3 id='uilabel-extensions-available-ios-apple-tv' class='heading'>UILabel Extensions (Available iOS, Apple TV)</h3>
+<h3 id='uistatusbarstyle-extensions-available-ios' class='heading'>UIStatusBarStyle Extensions (Available iOS)</h3>
+<h3 id='uitableview-extensions-available-ios-apple-tv' class='heading'>UITableView Extensions (Available iOS, Apple TV)</h3>
+<h3 id='uiview-extensions-available-ios-apple-tv' class='heading'>UIView Extensions (Available iOS, Apple TV)</h3>
+<h3 id='url-extensions-available-ios-apple-tv-watchos-macos' class='heading'>URL Extensions (Available iOS, Apple TV, watchOS, macOS)</h3>
+<h3 id='uikit-localizations-extensions-available-ios-apple-tv' class='heading'>UIKit Localizations Extensions (Available iOS, Apple TV)</h3>
+
+<p>All UI elements, have inspectable variable for the texts that might useful to have direct setter for <code>localized</code> string.</p>
+<h2 id='logging-manager' class='heading'>Logging Manager</h2>
+
+<p>All services that are part of the <strong>UsefulSDK</strong> or any other service in the app level can use, <code><a href="Classes/LoggingManager.html">LoggingManager</a></code> service to pass messages.</p>
+
+<p>The listener class from the app-level should be set into <code><a href="Classes/LoggingManager.html#/s:16iOSCoreUsefulSDK14LoggingManagerC8delegateAA0D8Delegate_pSgvpZ">LoggingManager.delegate</a></code> property, which also needs to conform <code><a href="Protocols/LoggingDelegate.html">LoggingDelegate</a></code> protocol, and can receive messages via <code>log:message:level:domain:source:</code> method.</p>
+<h3 id='loglevel' class='heading'>LogLevel</h3>
+
+<p>Each messages from the <code><a href="Classes/LoggingManager.html">LoggingManager</a></code> carry their level, e.g. importance.</p>
+<pre class="highlight swift"><code><span class="c1">/// minimum level of logs</span>
+<span class="k">case</span> <span class="n">verbose</span>
+
+<span class="c1">/// standard level of logs</span>
+<span class="k">case</span> <span class="n">info</span>
+
+<span class="c1">/// warning level</span>
+<span class="k">case</span> <span class="n">warning</span>
+
+<span class="c1">/// level for error logs</span>
+<span class="k">case</span> <span class="n">error</span>
+</code></pre>
+<h3 id='logdomain' class='heading'>LogDomain</h3>
+
+<p>In order to messages do more sense, also all messages carry their specified domain informations, e.g. which kind of part of the application/service responsible for it.</p>
+<pre class="highlight swift"><code><span class="c1">/// app domain</span>
+<span class="k">case</span> <span class="n">app</span>
+
+<span class="c1">/// view domain</span>
+<span class="k">case</span> <span class="n">view</span>
+
+<span class="c1">/// layout domain</span>
+<span class="k">case</span> <span class="n">layout</span>
+
+<span class="c1">/// controller domain</span>
+<span class="k">case</span> <span class="n">controller</span>
+
+<span class="c1">/// routing domain</span>
+<span class="k">case</span> <span class="n">routing</span>
+
+<span class="c1">/// service domain</span>
+<span class="k">case</span> <span class="n">service</span>
+
+<span class="c1">/// network domain</span>
+<span class="k">case</span> <span class="n">network</span>
+
+<span class="c1">/// data model domain</span>
+<span class="k">case</span> <span class="n">model</span>
+
+<span class="c1">/// cache domain</span>
+<span class="k">case</span> <span class="n">cache</span>
+
+<span class="c1">/// database domain</span>
+<span class="k">case</span> <span class="n">db</span>
+
+<span class="c1">/// input/output domain</span>
+<span class="k">case</span> <span class="n">io</span>
+</code></pre>
 
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2020 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2020-02-03)</p>
+          <p>&copy; 2020 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2020-02-09)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.11.2</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

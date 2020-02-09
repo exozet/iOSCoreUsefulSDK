@@ -92,9 +92,6 @@
                 <a href="../Extensions/MKMapView.html">MKMapView</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Extensions/MKMapView.html">MKMapView</a>
-              </li>
-              <li class="nav-group-task">
                 <a href="../Extensions/NSAttributedString.html">NSAttributedString</a>
               </li>
               <li class="nav-group-task">
@@ -167,6 +164,9 @@
                 <a href="../Extensions/UIView.html">UIView</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Extensions/UIViewController.html">UIViewController</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Extensions/URL.html">URL</a>
               </li>
             </ul>
@@ -202,10 +202,10 @@
                 <a href="../Protocols/TableCellIdentifiable.html">TableCellIdentifiable</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Protocols/TableViewPresentable.html">TableViewPresentable</a>
+                <a href="../Protocols/TableViewModelable.html">TableViewModelable</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Protocols/TableViewViewModelable.html">TableViewViewModelable</a>
+                <a href="../Protocols/TableViewPresentable.html">TableViewPresentable</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Protocols/ViewControllerIdentifiable.html">ViewControllerIdentifiable</a>
@@ -229,6 +229,12 @@
         <section>
           <section class="section">
             <h1>CGSize</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">extension</span> <span class="kt">CGSize</span></code></pre>
+
+                </div>
+              </div>
             
           </section>
           <section class="section task-group-section">
@@ -237,9 +243,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/"></a>
+                    <a name="/s:So6CGSizeV16iOSCoreUsefulSDKE1soiyA2B_12CoreGraphics7CGFloatVtFZ"></a>
                     <a name="//apple_ref/swift/Method/-(_:_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/">-(_:_:)</a>
+                    <a class="token" href="#/s:So6CGSizeV16iOSCoreUsefulSDKE1soiyA2B_12CoreGraphics7CGFloatVtFZ">-(_:_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -255,15 +261,23 @@
 </code></pre>
 
                       </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">static</span> <span class="kd">func</span> <span class="o">-</span> <span class="p">(</span><span class="nv">lhs</span><span class="p">:</span> <span class="kt">CGSize</span><span class="p">,</span> <span class="nv">rhs</span><span class="p">:</span> <span class="kt">CGFloat</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">CGSize</span></code></pre>
+
+                        </div>
+                      </div>
                     </section>
                   </div>
                 </li>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/"></a>
+                    <a name="/s:So6CGSizeV16iOSCoreUsefulSDKE1poiyA2B_12CoreGraphics7CGFloatVtFZ"></a>
                     <a name="//apple_ref/swift/Method/+(_:_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/">+(_:_:)</a>
+                    <a class="token" href="#/s:So6CGSizeV16iOSCoreUsefulSDKE1poiyA2B_12CoreGraphics7CGFloatVtFZ">+(_:_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -279,29 +293,13 @@
 </code></pre>
 
                       </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/"></a>
-                    <a name="//apple_ref/swift/Method/+=(_:_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/">+=(_:_:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Adds right handsize to left handsize.</p>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">static</span> <span class="kd">func</span> <span class="o">+</span> <span class="p">(</span><span class="nv">lhs</span><span class="p">:</span> <span class="kt">CGSize</span><span class="p">,</span> <span class="nv">rhs</span><span class="p">:</span> <span class="kt">CGFloat</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">CGSize</span></code></pre>
 
-<p>How to use:</p>
-<pre class="highlight swift"><code><span class="k">var</span> <span class="nv">size</span> <span class="o">=</span> <span class="kt">CGSize</span><span class="p">(</span><span class="nv">width</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span> <span class="nv">height</span><span class="p">:</span> <span class="mi">5</span><span class="p">)</span>
-<span class="n">size</span> <span class="o">+=</span> <span class="kt">CGSize</span><span class="p">(</span><span class="nv">width</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="nv">height</span><span class="p">:</span> <span class="mi">3</span><span class="p">)</span>
-</code></pre>
-
+                        </div>
                       </div>
                     </section>
                   </div>
@@ -309,9 +307,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/"></a>
-                    <a name="//apple_ref/swift/Method/-=(_:_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/">-=(_:_:)</a>
+                    <a name="/s:So6CGSizeV16iOSCoreUsefulSDKE2peoiyyABz_ABtFZ"></a>
+                    <a name="//apple_ref/swift/Method/+=(_:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So6CGSizeV16iOSCoreUsefulSDKE2peoiyyABz_ABtFZ">+=(_:_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -319,13 +317,245 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Decreases the size with the given right handsize.</p>
+                        <p>Adds right handside to left handside.</p>
+
+<p>How to use:</p>
+<pre class="highlight swift"><code><span class="k">var</span> <span class="nv">size</span> <span class="o">=</span> <span class="kt">CGSize</span><span class="p">(</span><span class="nv">width</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span> <span class="nv">height</span><span class="p">:</span> <span class="mi">5</span><span class="p">)</span>
+<span class="n">size</span> <span class="o">+=</span> <span class="kt">CGSize</span><span class="p">(</span><span class="nv">width</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="nv">height</span><span class="p">:</span> <span class="mi">3</span><span class="p">)</span>
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">static</span> <span class="kd">func</span> <span class="o">+=</span> <span class="p">(</span><span class="nv">lhs</span><span class="p">:</span> <span class="k">inout</span> <span class="kt">CGSize</span><span class="p">,</span> <span class="nv">rhs</span><span class="p">:</span> <span class="kt">CGSize</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So6CGSizeV16iOSCoreUsefulSDKE2seoiyyABz_ABtFZ"></a>
+                    <a name="//apple_ref/swift/Method/-=(_:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So6CGSizeV16iOSCoreUsefulSDKE2seoiyyABz_ABtFZ">-=(_:_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Decreases the size with the given right handside.</p>
 
 <p>How to use:</p>
 <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">size</span> <span class="o">=</span> <span class="kt">CGSize</span><span class="p">(</span><span class="nv">width</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span> <span class="nv">height</span><span class="p">:</span> <span class="mi">5</span><span class="p">)</span>
 <span class="n">size</span> <span class="o">-=</span> <span class="kt">CGSize</span><span class="p">(</span><span class="nv">width</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="nv">height</span><span class="p">:</span> <span class="mi">3</span><span class="p">)</span>
 </code></pre>
 
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">static</span> <span class="kd">func</span> <span class="o">-=</span> <span class="p">(</span><span class="nv">lhs</span><span class="p">:</span> <span class="k">inout</span> <span class="kt">CGSize</span><span class="p">,</span> <span class="nv">rhs</span><span class="p">:</span> <span class="kt">CGSize</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So6CGSizeV16iOSCoreUsefulSDKE2peoiyyABz_12CoreGraphics7CGFloatVtFZ"></a>
+                    <a name="//apple_ref/swift/Method/+=(_:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So6CGSizeV16iOSCoreUsefulSDKE2peoiyyABz_12CoreGraphics7CGFloatVtFZ">+=(_:_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Adds right handside to left handside.</p>
+
+<p>How to use:</p>
+<pre class="highlight swift"><code><span class="k">var</span> <span class="nv">size</span> <span class="o">=</span> <span class="kt">CGSize</span><span class="p">(</span><span class="nv">width</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span> <span class="nv">height</span><span class="p">:</span> <span class="mi">5</span><span class="p">)</span>
+<span class="n">size</span> <span class="o">+=</span> <span class="mi">3</span>
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">static</span> <span class="kd">func</span> <span class="o">+=</span> <span class="p">(</span><span class="nv">lhs</span><span class="p">:</span> <span class="k">inout</span> <span class="kt">CGSize</span><span class="p">,</span> <span class="nv">rhs</span><span class="p">:</span> <span class="kt">CGFloat</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So6CGSizeV16iOSCoreUsefulSDKE2seoiyyABz_12CoreGraphics7CGFloatVtFZ"></a>
+                    <a name="//apple_ref/swift/Method/-=(_:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So6CGSizeV16iOSCoreUsefulSDKE2seoiyyABz_12CoreGraphics7CGFloatVtFZ">-=(_:_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Decreases the size with the given right handside.</p>
+
+<p>How to use:</p>
+<pre class="highlight swift"><code><span class="k">var</span> <span class="nv">size</span> <span class="o">=</span> <span class="kt">CGSize</span><span class="p">(</span><span class="nv">width</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span> <span class="nv">height</span><span class="p">:</span> <span class="mi">5</span><span class="p">)</span>
+<span class="n">size</span> <span class="o">-=</span> <span class="mi">3</span>
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">static</span> <span class="kd">func</span> <span class="o">-=</span> <span class="p">(</span><span class="nv">lhs</span><span class="p">:</span> <span class="k">inout</span> <span class="kt">CGSize</span><span class="p">,</span> <span class="nv">rhs</span><span class="p">:</span> <span class="kt">CGFloat</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So6CGSizeV16iOSCoreUsefulSDKE2peoiyyABz_SdtFZ"></a>
+                    <a name="//apple_ref/swift/Method/+=(_:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So6CGSizeV16iOSCoreUsefulSDKE2peoiyyABz_SdtFZ">+=(_:_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Adds right handside to left handside.</p>
+
+<p>How to use:</p>
+<pre class="highlight swift"><code><span class="k">var</span> <span class="nv">size</span> <span class="o">=</span> <span class="kt">CGSize</span><span class="p">(</span><span class="nv">width</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span> <span class="nv">height</span><span class="p">:</span> <span class="mi">5</span><span class="p">)</span>
+<span class="n">size</span> <span class="o">+=</span> <span class="mi">3</span>
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">static</span> <span class="kd">func</span> <span class="o">+=</span> <span class="p">(</span><span class="nv">lhs</span><span class="p">:</span> <span class="k">inout</span> <span class="kt">CGSize</span><span class="p">,</span> <span class="nv">rhs</span><span class="p">:</span> <span class="kt">Double</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So6CGSizeV16iOSCoreUsefulSDKE2seoiyyABz_SdtFZ"></a>
+                    <a name="//apple_ref/swift/Method/-=(_:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So6CGSizeV16iOSCoreUsefulSDKE2seoiyyABz_SdtFZ">-=(_:_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Decreases the size with the given right handside.</p>
+
+<p>How to use:</p>
+<pre class="highlight swift"><code><span class="k">var</span> <span class="nv">size</span> <span class="o">=</span> <span class="kt">CGSize</span><span class="p">(</span><span class="nv">width</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span> <span class="nv">height</span><span class="p">:</span> <span class="mi">5</span><span class="p">)</span>
+<span class="n">size</span> <span class="o">-=</span> <span class="mi">3</span>
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">static</span> <span class="kd">func</span> <span class="o">-=</span> <span class="p">(</span><span class="nv">lhs</span><span class="p">:</span> <span class="k">inout</span> <span class="kt">CGSize</span><span class="p">,</span> <span class="nv">rhs</span><span class="p">:</span> <span class="kt">Double</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So6CGSizeV16iOSCoreUsefulSDKE2peoiyyABz_SitFZ"></a>
+                    <a name="//apple_ref/swift/Method/+=(_:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So6CGSizeV16iOSCoreUsefulSDKE2peoiyyABz_SitFZ">+=(_:_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Adds right handside to left handside.</p>
+
+<p>How to use:</p>
+<pre class="highlight swift"><code><span class="k">var</span> <span class="nv">size</span> <span class="o">=</span> <span class="kt">CGSize</span><span class="p">(</span><span class="nv">width</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span> <span class="nv">height</span><span class="p">:</span> <span class="mi">5</span><span class="p">)</span>
+<span class="n">size</span> <span class="o">+=</span> <span class="mi">3</span>
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">static</span> <span class="kd">func</span> <span class="o">+=</span> <span class="p">(</span><span class="nv">lhs</span><span class="p">:</span> <span class="k">inout</span> <span class="kt">CGSize</span><span class="p">,</span> <span class="nv">rhs</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So6CGSizeV16iOSCoreUsefulSDKE2seoiyyABz_SitFZ"></a>
+                    <a name="//apple_ref/swift/Method/-=(_:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So6CGSizeV16iOSCoreUsefulSDKE2seoiyyABz_SitFZ">-=(_:_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Decreases the size with the given right handside.</p>
+
+<p>How to use:</p>
+<pre class="highlight swift"><code><span class="k">var</span> <span class="nv">size</span> <span class="o">=</span> <span class="kt">CGSize</span><span class="p">(</span><span class="nv">width</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span> <span class="nv">height</span><span class="p">:</span> <span class="mi">5</span><span class="p">)</span>
+<span class="n">size</span> <span class="o">-=</span> <span class="mi">3</span>
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">static</span> <span class="kd">func</span> <span class="o">-=</span> <span class="p">(</span><span class="nv">lhs</span><span class="p">:</span> <span class="k">inout</span> <span class="kt">CGSize</span><span class="p">,</span> <span class="nv">rhs</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>
@@ -335,7 +565,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2020 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2020-02-03)</p>
+          <p>&copy; 2020 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2020-02-09)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.11.2</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
