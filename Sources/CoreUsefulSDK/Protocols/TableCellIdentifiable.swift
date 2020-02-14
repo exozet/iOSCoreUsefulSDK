@@ -56,7 +56,7 @@ public extension TableCellIdentifiable {
 }
 
 extension UITableViewCell: TableCellIdentifiable {
-    public static func identifier() -> String {
+    open class func identifier() -> String {
         return String(describing: self)
     }
 }

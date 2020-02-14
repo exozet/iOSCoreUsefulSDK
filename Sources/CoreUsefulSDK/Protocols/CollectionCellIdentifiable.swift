@@ -57,7 +57,7 @@ public extension CollectionCellIdentifiable {
 }
 
 extension UICollectionViewCell: CollectionCellIdentifiable {
-    public static func identifier() -> String {
+    open class func identifier() -> String {
         return String(describing: self)
     }
 }
