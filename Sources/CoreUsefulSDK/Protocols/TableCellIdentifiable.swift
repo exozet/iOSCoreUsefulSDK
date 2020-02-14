@@ -26,18 +26,15 @@ import UIKit
 /**
  Table Cells who conform this protocol can be identified by their class names and dequeueable.
  */
-public protocol TableCellIdentifiable: UITableViewCell { }
-
-public extension TableCellIdentifiable {
-    
+@objc public protocol TableCellIdentifiable: class {
     /**
      Returns class name as identifier.
      - returns: Identifier which can be used instead of `reuseIdentifier`.
      */
-    static func identifier() -> String {
-        return String(describing: self)
-    }
-    
+    static func identifier() -> String
+}
+
+public extension TableCellIdentifiable {
     /**
      Initializes new cell for the specified table with the given indexPath.
      - parameter tableView: Cell should be registered first before use this method.
@@ -58,6 +55,10 @@ public extension TableCellIdentifiable {
     }
 }
 
-extension UITableViewCell: TableCellIdentifiable { }
+extension UITableViewCell: TableCellIdentifiable {
+    public static func identifier() -> String {
+        return String(describing: self)
+    }
+}
 
 #endif

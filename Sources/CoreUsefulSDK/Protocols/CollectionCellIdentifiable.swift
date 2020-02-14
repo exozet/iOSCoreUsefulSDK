@@ -26,17 +26,15 @@ import UIKit
 /**
  Collection Cells who conform this protocol can be identified by their class names and dequeueable.
  */
-public protocol CollectionCellIdentifiable: UICollectionViewCell { }
-
-public extension CollectionCellIdentifiable {
-    
+@objc public protocol CollectionCellIdentifiable: class {
     /**
      Returns class name as identifier.
      - returns: Identifier which can be used instead of `reuseIdentifier`.
      */
-    static func identifier() -> String {
-        return String(describing: self)
-    }
+    static func identifier() -> String
+}
+
+public extension CollectionCellIdentifiable {
     
     /**
      Initializes new cell for the specified collection with the given indexPath.
@@ -58,6 +56,10 @@ public extension CollectionCellIdentifiable {
     }
 }
 
-extension UICollectionViewCell: CollectionCellIdentifiable { }
+extension UICollectionViewCell: CollectionCellIdentifiable {
+    public static func identifier() -> String {
+        return String(describing: self)
+    }
+}
 
 #endif
