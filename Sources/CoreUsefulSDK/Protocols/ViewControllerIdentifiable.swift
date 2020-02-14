@@ -55,7 +55,7 @@ extension UIViewController: ViewControllerIdentifiable {
      Returns class name as identifier as default.
      - returns: Identifier which should be set in **Storyboard**.
      */
-    public class func identifier() -> String {
+    open class func identifier() -> String {
         return String(describing: self)
     }
     
@@ -63,7 +63,7 @@ extension UIViewController: ViewControllerIdentifiable {
      Returns storyboardname for initializer
      - returns: Default value is Main. Override for other storyboards.
      */
-    public class func storyboardName() -> String {
+    open class func storyboardName() -> String {
         return "Main"
     }
     
