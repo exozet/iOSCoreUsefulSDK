@@ -58,4 +58,6 @@ public extension CollectionCellIdentifiable {
     }
 }
 
+extension UICollectionViewCell: CollectionCellIdentifiable { }
+
 #endif
