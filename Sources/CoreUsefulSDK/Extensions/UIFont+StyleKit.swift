@@ -28,21 +28,39 @@ public extension UIFont {
     /// Structure to keep all style of the custom fonts.
     struct CustomFont {
         /// name for the regular style
-        var regular: String
+        public var regular: String
         /// name for the regular italic style
-        var regularItalic: String
+        public var regularItalic: String
         /// name for the medium style
-        var medium: String
+        public var medium: String
         /// name for the medium italic style
-        var mediumItalic: String
+        public var mediumItalic: String
         /// name for the light style
-        var light: String
+        public var light: String
         /// name for the light italic style
-        var lightItalic: String
+        public var lightItalic: String
         /// name for the bold style
-        var bold: String
+        public var bold: String
         /// name for the bold italic style
-        var boldItalic: String
+        public var boldItalic: String
+        
+        public init(regular: String,
+                    regularItalic: String,
+                    medium: String,
+                    mediumItalic: String,
+                    light: String,
+                    lightItalic: String,
+                    bold: String,
+                    boldItalic: String) {
+            self.regular = regular
+            self.regularItalic = regularItalic
+            self.medium = medium
+            self.mediumItalic = mediumItalic
+            self.light = light
+            self.lightItalic = lightItalic
+            self.bold = bold
+            self.boldItalic = boldItalic
+        }
     }
     
     /// Enum to define available styles of the font.
