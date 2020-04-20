@@ -32,22 +32,22 @@ public extension UIDevice {
     struct ScreenSizes {
         
         /// `4.0` inch screen size (iPhone 5, 5s, SE)
-        static let small: ScreenSize = 1136
+        public static let small: ScreenSize = 1136
         
         /// `4.7` inch screen size (iPhone 6, 6s, 7, 8)
-        static let standard: ScreenSize = 1334
+        public static let standard: ScreenSize = 1334
         
         /// `6.1` inch screen size (iPhone XR)
-        static let XR: ScreenSize = 1792
+        public static let XR: ScreenSize = 1792
         
         /// `5.5` inch screen size (iPhone 6+, 7+, 8+)
-        static let plus: ScreenSize = 1920
+        public static let plus: ScreenSize = 1920
         
         /// `5.8` inch screen size (iPhone X, XS)
-        static let X: ScreenSize = 2436
+        public static let X: ScreenSize = 2436
         
         /// `6.5` inch screen size (iPhone XS Max)
-        static let max: ScreenSize = 2688
+        public static let max: ScreenSize = 2688
     }
     
     /// Enum which can describe screen size and notch property.
