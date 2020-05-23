@@ -27,6 +27,10 @@ import UIKit
 /// The methods can be used for the designated places, or any other purposes.
 public protocol TableViewModelable {
     
+    /// Gives chances viewmodel to prepare/customize tableview. It should be called as early as possible when tableview is available.
+    /// - Parameter tableView: Source tableview.
+    func prepare(_ tableView: UITableView)
+    
     /// This method designated to be called from `tableView:numberOfRowsInSection:`
     /// - parameter section: Section number of the `tableview`.
     func numberOfRows(in section: Int, for tableView: UITableView) -> Int
@@ -73,6 +77,24 @@ public protocol TableViewModelable {
     ///   - sourceIndex: Source IndexPath for the cell row.
     ///   - destinationIndex: Destination IndexPath for the cell row.
     func moveRowAt(from sourceIndex: IndexPath, to destinationIndex: IndexPath, for tableView: UITableView)
+    
+    /// This method designated to be called from `scrollViewDidScroll:`.
+    /// In default, does nothing.
+    func tableViewDidScroll(_ tableView: UIScrollView)
+    
+    /// This method designated to be called from `tableView:heightForHeaderInSection:`
+    ///
+    /// In default, returns `0`.
+    /// - Parameter section: Section of the header.
+    /// - Parameter tableView: Source tableview.
+    func heightForHeader(in section: Int, for tableView: UITableView) -> CGFloat
+    
+    /// This method designated to be called from `tableView:heightForRowAt:`
+    ///
+    /// In default, returns `UITableView.automaticDimension`.
+    /// - Parameter indexPath: IndexPath for the cell row.
+    /// - Parameter tableView: Source tableview.
+    func heightFor(row: IndexPath, for tableView: UITableView) -> CGFloat
 }
 
 public extension TableViewModelable {
@@ -82,6 +104,9 @@ public extension TableViewModelable {
     func canEditRow(at indexPath: IndexPath, for tableView: UITableView) -> Bool { return false }
     func canMoveRow(at indexPath: IndexPath, for tableView: UITableView) -> Bool { return false }
     func moveRowAt(from sourceIndex: IndexPath, to destinationIndex: IndexPath, for tableView: UITableView) { }
+    func tableViewDidScroll(_ tableView: UIScrollView) { }
+    func heightForHeader(in section: Int, for tableView: UITableView) -> CGFloat { return 0 }
+    func heightFor(row: IndexPath, for tableView: UITableView) -> CGFloat { return UITableView.automaticDimension }
 }
 
 #endif
