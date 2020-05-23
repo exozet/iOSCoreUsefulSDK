@@ -98,7 +98,7 @@ public protocol TableViewModelable {
 }
 
 public extension TableViewModelable {
-    func numberOfSections() -> Int { return 1 }
+    func numberOfSections(for tableView: UITableView) -> Int { return 1 }
     func headerFor(section: Int, for tableView: UITableView) -> UIView? { return nil }
     func footerFor(section: Int, for tableView: UITableView) -> UIView? { return nil }
     func canEditRow(at indexPath: IndexPath, for tableView: UITableView) -> Bool { return false }
