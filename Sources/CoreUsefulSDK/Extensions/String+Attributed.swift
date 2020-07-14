@@ -85,10 +85,10 @@ public extension String {
         for attribute in attributes {
             if attribute.key == .font {
                 guard let font = attribute.value as? UIFont else { break }
-                let size = font.pointSize
+//                let size = font.pointSize
                 // check font weight
                 text.enumerateAttribute(.font, in: NSRange(location: 0, length: text.string.count), options: .init(rawValue: 0)) { (object, range, stop) in
-                    var newFont: UIFont = font
+                    let newFont: UIFont = font
 //
 //                    if let fontTraits = (object as? UIFont)?.fontDescriptor.symbolicTraits {
 //                        if fontTraits.contains(.traitItalic) && fontTraits.contains(.traitBold) {

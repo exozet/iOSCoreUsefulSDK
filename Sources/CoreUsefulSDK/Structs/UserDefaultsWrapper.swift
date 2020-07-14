@@ -11,16 +11,29 @@ import Foundation
 @propertyWrapper
 public struct UserDefaultsValue<Value> {
     /// The name of one of the receiver's properties.
-    let key: String
+    public let key: String
     /// The return value for the property if value cannot be identified by given key in `UserDefaults`.
-    let defaultValue: Value
+    public let defaultValue: Value
     /// `UserDefaults` database. Default is `standard`.
-    var userDefaults: UserDefaults = .standard
+    public var userDefaults: UserDefaults = .standard
 
     /// Returns wrapped value or sets to `UserDefaults`.
     public var wrappedValue: Value {
         get { userDefaults.value(forKey: key) as? Value ?? defaultValue }
         set { userDefaults.setValue(newValue, forKey: key) }
+    }
+    
+    /// Initializes Wrapper struct.
+    /// - Parameters:
+    ///   - key: The name of one of the receiver's properties.
+    ///   - defaultValue: The return value for the property if value cannot be identified by given key in `UserDefaults`.
+    ///   - userDefaults: `UserDefaults` database. Default is `standard`.
+    public init(key: String,
+                defaultValue: Value,
+                userDefaults: UserDefaults = .standard) {
+        self.key = key
+        self.defaultValue = defaultValue
+        self.userDefaults = userDefaults
     }
 }
 
@@ -28,13 +41,24 @@ public struct UserDefaultsValue<Value> {
 @propertyWrapper
 public struct UserDefaultsOptionalValue<Value> {
     /// The name of one of the receiver's properties.
-    let key: String
+    public let key: String
     /// `UserDefaults` database. Default is `standard`.
-    var userDefaults: UserDefaults = .standard
+    public var userDefaults: UserDefaults = .standard
 
     /// Returns wrapped value or sets to `UserDefaults`.
     public var wrappedValue: Value? {
         get { userDefaults.value(forKey: key) as? Value }
         set { userDefaults.setValue(newValue, forKey: key) }
+    }
+    
+    /// Initializes Wrapper struct.
+    /// - Parameters:
+    ///   - key: The name of one of the receiver's properties.
+    ///   - defaultValue: The return value for the property if value cannot be identified by given key in `UserDefaults`.
+    ///   - userDefaults: `UserDefaults` database. Default is `standard`.
+    public init(key: String,
+                userDefaults: UserDefaults = .standard) {
+        self.key = key
+        self.userDefaults = userDefaults
     }
 }
