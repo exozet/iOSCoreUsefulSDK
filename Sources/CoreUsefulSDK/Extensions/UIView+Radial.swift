@@ -68,7 +68,7 @@ public extension UIView {
     }
     
     /// Radiates corner.
-    @IBInspectable var cornerRadius: CGFloat {
+    @IBInspectable open var cornerRadius: CGFloat {
         get { return self.layer.cornerRadius }
         set {
             self.layer.cornerRadius = newValue
