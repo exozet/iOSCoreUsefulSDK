@@ -23,7 +23,7 @@
 #if !os(macOS) && !os(watchOS)
 import UIKit
 
-extension UIApplication {
+public extension UIApplication {
     
     /// Returns very top view controller.
     class func topViewController() -> UIViewController? {
