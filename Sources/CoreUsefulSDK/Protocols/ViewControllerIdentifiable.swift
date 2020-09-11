@@ -42,7 +42,7 @@ public extension ViewControllerIdentifiable {
      - parameter bundle: Bundle for the storyboard. Default is `nil`.
      - returns: View Controller
      */
-    static func create(storyboard: String? = nil, vcIdentifier: String? = nil, bundle: Bundle? = nil) -> Self {
+    public static func create(storyboard: String? = nil, vcIdentifier: String? = nil, bundle: Bundle? = nil) -> Self {
         let vc = UIStoryboard(name: storyboard ?? storyboardName(), bundle: bundle).instantiateViewController(withIdentifier: vcIdentifier ?? identifier())
         return vc as! Self
     }
