@@ -95,6 +95,26 @@ public extension Date {
         return dates
     }
     
+    /// Returns a date format string for a date (without time) for the currently on device setuped language/region.
+    /// e.g. 'DD/MM/YYYY' if current language and region is germany
+    /// - returns: format as string
+    static func getLocalizedDateFormat() -> String {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .short
+        formatter.timeStyle = .none
+        return formatter.dateFormat
+    }
+
+    /// Returns a tie format string for a time (without date) for the currently on device setuped language/region.
+    /// e.g. 'HH:MM' if current language and region is germany
+    /// - returns: format as string
+    static func getLocalizedTimeFormat() -> String {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .none
+        formatter.timeStyle = .short
+        return formatter.dateFormat
+    }
+    
     /// Checks two date objects and compares do they represent same day on the calendar.
     /// - parameter date: Date object to compare
     /// - returns: `true` if two date objects have same day, month and year.
