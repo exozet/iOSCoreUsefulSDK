@@ -64,6 +64,25 @@ public extension String {
         self = validated
     }
     
+    /// Initialize given string as filemame. Any not a allowed filename characters will be replaced by '-'
+    /// - Parameter filename: string which should represent a filename.
+    init(filename: String) {
+        self = filename.convertToValidFileName()
+    }
+    
+    /// replaces all characters from a string which are not valid for a file name with '-'
+    func convertToValidFileName() -> String {
+        let invalidFileNameCharactersRegex = "[^a-zA-Z0-9_.]+"
+        let fullRange = startIndex..<endIndex
+        let validName = replacingOccurrences(of: invalidFileNameCharactersRegex,
+                                           with: "-",
+                                        options: .regularExpression,
+                                          range: fullRange)
+        return validName
+    }
+    
+    
+    
     /// Infix operator style initializer for email.
     /// - Parameters:
     ///   - lhs: Variable to assign.

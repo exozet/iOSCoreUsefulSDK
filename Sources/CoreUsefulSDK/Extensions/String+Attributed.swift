@@ -73,6 +73,16 @@ public extension String {
         return ""
     }
     
+    /// Capitalizing first letter
+    func capitalizingFirstLetter() -> String {
+        return prefix(1).capitalized + dropFirst()
+    }
+
+    mutating func capitalizeFirstLetter() {
+        self = self.capitalizingFirstLetter()
+    }
+
+    
     
     
     /// Returns attributed string
@@ -140,5 +150,66 @@ public extension String {
     /// Converts string to URL by using `stringLiteral` initializer.
     var url: URL { return URL(stringLiteral: self) }
     
+}
+
+
+
+public extension String {
+
+    var length: Int {
+        return count
+    }
+
+    subscript (i: Int) -> String {
+        return self[i ..< i + 1]
+    }
+
+    func substring(fromIndex: Int) -> String {
+        return self[min(fromIndex, length) ..< length]
+    }
+
+    func substring(toIndex: Int) -> String {
+        return self[0 ..< max(0, toIndex)]
+    }
+
+    subscript (r: Range<Int>) -> String {
+        let range = Range(uncheckedBounds: (lower: max(0, min(length, r.lowerBound)),
+                                            upper: min(length, max(0, r.upperBound))))
+        let start = index(startIndex, offsetBy: range.lowerBound)
+        let end = index(start, offsetBy: range.upperBound - range.lowerBound)
+        return String(self[start ..< end])
+    }
+}
+
+
+public extension String {
+    var nonEmpty: String? {
+        return self.isEmpty ? nil : self
+    }
+}
+
+
+public extension String {
+    // allows you to replace a string inside a string without getting a new string object
+    // var string = "foo!"
+    // string.replace("!", with: "?")
+    // print(string) // output is 'foo?'
+    mutating func replace(_ originalString:String, with newString:String) {
+        self = self.replacingOccurrences(of: originalString, with: newString)
+    }
+}
+
+
+
+public extension String {
+    func countInstances(of stringToFind: String) -> Int {
+        var stringToSearch = self
+        var count = 0
+        while let foundRange = stringToSearch.range(of: stringToFind, options: .diacriticInsensitive) {
+            stringToSearch = stringToSearch.replacingCharacters(in: foundRange, with: "")
+            count += 1
+        }
+        return count
+    }
 }
 
