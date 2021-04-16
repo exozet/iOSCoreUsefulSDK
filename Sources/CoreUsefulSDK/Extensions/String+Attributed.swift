@@ -58,8 +58,22 @@ public extension String {
     
     /// Returns localized string.
     var localized: String {
-        return NSLocalizedString(self, comment: self)
+        if NSLocalizedString(self, comment: self).isEmpty {
+          return enLocalized
+        }
+        return  NSLocalizedString(self, comment: self)
     }
+    
+    /// returns localized string in english or empty string
+    var enLocalized: String {
+        if let enPath = Bundle.main.path(forResource: "en", ofType: "lproj") {
+            let enBundle = Bundle(path: enPath)
+            return enBundle?.localizedString(forKey: self, value: self, table: nil) ?? ""
+        }
+        return ""
+    }
+    
+    
     
     /// Returns attributed string
     func attributed(with attributes: [NSAttributedString.Key:Any]) -> NSAttributedString {
