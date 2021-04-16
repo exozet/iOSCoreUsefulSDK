@@ -70,17 +70,7 @@ public extension Date {
     }
     
     
-    /// Returns ISO 8601 formated string of the date
-    func iso8601() -> String {
-        let formatter = DateFormatter()
-        let enUSPosixLocale = Locale(identifier: "en_US_POSIX")
-        formatter.locale = enUSPosixLocale
-        formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZZZZZ"
-        formatter.calendar = Calendar(identifier: .gregorian)
-        
-        return formatter.string(from: self)
-    }
-    
+    // MARK: static class function
     
     /// returns an array of date object between two dates
     static func dates(from fromDate: Date, to toDate: Date) -> [Date] {
@@ -114,6 +104,22 @@ public extension Date {
         formatter.timeStyle = .short
         return formatter.dateFormat
     }
+    
+    
+    // MARK: Instance functions
+    
+    
+    /// Returns ISO 8601 formated string of the date
+    func iso8601() -> String {
+        let formatter = DateFormatter()
+        let enUSPosixLocale = Locale(identifier: "en_US_POSIX")
+        formatter.locale = enUSPosixLocale
+        formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZZZZZ"
+        formatter.calendar = Calendar(identifier: .gregorian)
+        
+        return formatter.string(from: self)
+    }
+
     
     /// Checks two date objects and compares do they represent same day on the calendar.
     /// - parameter date: Date object to compare
