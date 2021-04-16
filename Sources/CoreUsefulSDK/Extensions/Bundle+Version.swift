@@ -40,4 +40,15 @@ public extension Bundle {
         return "\(version ?? "0") (\(build ?? "0")) - \(gitHash)"
     }
     
+
+    /// returns the currently setuped build number
+    /// - returns: build number
+    class var buildNumber: Int {
+        if let buildNumber = Bundle.main.infoDictionary?["CFBundleVersion"] as? String {
+            if let buildNumberInt = buildNumber.intValue {
+                return buildNumberInt
+            }
+        }
+        return 0
+    }
 }
