@@ -25,8 +25,7 @@
 
 import Foundation
 
-
-extension NSObject {
+public extension NSObject {
     var isMacCatalystEnviroment: Bool {
         let isMacCatylist: Bool
         
