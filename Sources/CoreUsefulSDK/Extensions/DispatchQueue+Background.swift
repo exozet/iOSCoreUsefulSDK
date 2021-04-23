@@ -47,7 +47,7 @@ import Foundation
  */
  
 
-extension DispatchQueue {
+public extension DispatchQueue {
 
     /// Starts a background queue with completion handler
     static func background(delay: Double = 0.0, background: (()->Void)? = nil, completion: (() -> Void)? = nil) {
