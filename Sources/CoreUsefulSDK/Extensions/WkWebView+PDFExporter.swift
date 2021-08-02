@@ -24,6 +24,7 @@
 // THE SOFTWARE.
 
 
+#if !os(macOS) && !os(watchOS)
 import Foundation
 import WebKit
 
@@ -104,3 +105,5 @@ extension UIPrintPageRenderer {
         return pdfData
     }
 }
+
+#endif
